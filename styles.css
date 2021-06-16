@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #BE3B44;
+    width: 100%;
+  }
+  
+  #navbar ul {
+    padding: 0;
+    display: flex;
+    float:right;
+  }
+  
+  #navbar li {
+    padding: 19.2px;
+    list-style:none;
+  }
+  
+  #navbar a {
+    color: #F0F0F0;
+    font-family: Poppins, sans-serif;
+    font-size: 21.12px;
+    text-decoration: none;
+  }
+  
+  #welcome-section {
+    background-color: #000;
+    background-image: linear-gradient(
+  62deg
+  , #3a3d40 0%, #181719 100%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #projects {
+    background: #45567D;
+    text-align: center;
+  }
+  
+  .project-tile{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  
+  .project-header {
+    padding: 96px 19.2px;
+  }
+  
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  .project-title {
+    color: #F0F0F0;
+    font-family: Poppins, sans-serif;
+    font-size: 19.2px;
+    padding: 19.2px 4.8px;
+    background-color: #303841;
+    margin-top: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+  #contact-section {
+    background-color: #303841;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1, h2, a{
+    font-family: Raleway, sans-serif;
+    color: #F0F0F0;
+  }
+  
+  h1 {
+    font-size: 58px;
+  }
+  
+  h2 {
+    font-size: 40.32px;
+  }
+  
+  p {
+    font-family: Poppins, sans-serif;
+    font-size: 28.8px;
+    color: #BE3144;
+    margin-top: 10px;
+  }
+  
+  #contact-section p {
+    font-family: Poppins, sanss-serif;
+    color: #F0F0F0;
+    font-size: 17px;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  #contact-section a {
+    text-decoration: none;
+    color: #F0F0F0;
+    font-size: 23px;
+    font-family: Poppins, sans-serif;
+    padding: 9.6px 19.2px;
+  }
+  
+  .links {
+    margin-top: 50px;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    
+  }
