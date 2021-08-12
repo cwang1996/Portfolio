@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-  <title>Personal Portfolio</title>
+  <title>Calvin Wang</title>
 </head>
 <body>
-  
+<div class='container'>  
   <nav id="navbar">
-    <span>cwang1996</span>
+    <div>
+      <span class='navbar-name'>CW</span>
+    </div>  
     <ul class='navbarlinks'>
       <li><a href="#welcome-section">About</a></li>
       <li><a href="#projects">Work</a></li>
@@ -20,14 +23,72 @@
     <div class="links">
       <a id="profile-link" href="https://github.com/cwang1996" target="_blank">GitHub</a>
       <a id="profile-link" href="mailto:calvinwang@yahoo.com" target="_blank">Email</a>
+      <a id="profile-link" href="" target="_blank">Resume</a>
     </div>
   </nav>
 
   <section id="welcome-section">
-    <h1>Hi, I'm Calvin</h1>
-    <p class='text-auto'>a web developer</p>
+      <h1>Hi, I'm Calvin &#9996</h1>
+      <p class='text-auto'>A Front End Web Developer</p>
+      <button class='contact-btn'>Contact Me!</button>
+      <i class="welcome-down fas fa-arrow-down"></i>
   </section>
 
+  <section id='projects-section'>
+    <div class='project-item project-one'></div>
+    <div class='project-item project-two'></div>
+    <div class='project-item project-three'></div>
+    <div class='project-item project-four'></div>
+  </section>
+
+  <section id="about-section">
+    <h2 class='about-h2'>A short backstory</h2>
+    <p class='about-p'>Hello again, I appreciate you taking the time to scroll this far! I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.</p>
+    <p class='about-p'>I've always been fascinated with coding, but I lacked the confidence to ever pursue it. It was foolish of me to give up without even trying, but I finally bit the bullet. All I can say is, I'm completely hooked and growing more passionate and eager to learn each day. </p>
+    <div class='skills-container'>
+      <div class='skills'>
+        <div class='skills-item'>
+        <i class="skill-icon fab fa-html5"></i>
+        <span>HTML5</span>
+        </div>
+        <div class='skills-item'>
+        <i class="skill-icon fab fa-css3-alt"></i>
+        <span>CSS3</span>
+        </div>
+        <div class='skills-item'>
+        <i class="skill-icon fab fa-js-square"></i>
+        <span>JavaScript</span>
+        </div>
+        <div class='skills-item'>
+        <i class="skill-icon fab fa-react"></i>
+        <span>React</span>
+        </div>
+        <div class='skills-item'>
+        <i class="skill-icon fab fa-sass"></i>
+        <span>Sass</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-section">
+    <div class="contact-header">
+      <h2 class='contact-h2'>Let's Connect!</h2>
+      <p class='contact-p'>If you have any questions, or would like to have a quick chat, then feel free to send me a message here. Thanks for stopping by!</p>
+      <div class='contact-icons'>
+        <i class="icons fab fa-github"></i>
+        <i class="icons fab fa-linkedin"></i>
+        <i class="icons fas fa-envelope"></i>
+      </div>
+    </div>
+    <form class='contact-form'>
+      <input type='text' placeholder='name' class='contact-name'>
+      <input type='text' placeholder='email' class='contact-email'>
+      <textarea placeholder='message' class='contact-message'></textarea>
+      <input type='submit' class='submit-btn'>
+    </form>
+  </section>
+</div>
     <script src='app.js'></script>
 </body>
 </html>
