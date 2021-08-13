@@ -1,18 +1,31 @@
+//auto text
 const text_auto = document.querySelector('.text-auto')
 
-let text = "a web developer";
+let text = "A Front End Developer";
 let index = 1;
 
-setInterval(writeText, 500)
+setInterval(writeText, 100)
 
 function writeText(){
     text_auto.innerText = text.slice(0, index);
     index++;
-    if(index > text.length){
-        index=1;
-    }
 }
 
+// SmoothScroll Script
 const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 300
+    speed: 500
 });
+
+// sticky navbar
+window.onscroll = function() {myFunction()}
+
+const navbar = document.getElementById('navbar');
+const sticky = navbar.offsetTop;
+
+const myFunction = () => {
+    if(window.pageYOffset >= sticky) {
+        navbar.classList.add('sticky')
+    } else {
+        navbar.classList.remove('sticky');
+    }
+}
