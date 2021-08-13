@@ -11,61 +11,81 @@
 </head>
 <body>
 <div class='container'>  
+
+  <div class='contact'>
+    <ul class='contact-links'>
+      <a class='contact-items' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target="_blank"><li class='linkedin'>LinkedIn<i class="icons fab fa-linkedin"></i></li></a>
+      <a class='contact-items' href='https://github.com/cwang1996' target="_blank"><li class='github'>GitHub<i class="icons fab fa-github"></i></li></a>
+      <a class='contact-items' href='mailto: calvinwang@yahoo.com'><li class='email'>Email<i class="icons fas fa-envelope"></i></li></a>
+      <a class='contact-items' href='' target="_blank"><li class='resume'>Resume<i class="icons fas fa-file"></i></li></a>
+    </ul>
+  </div>
+
+  <section id="welcome-section">
+      <h1>Hello, I'm <span class='color-name'>Calvin Wang</span> &#9996</h1>
+      <p class='text-auto'>A Front End Developer</p>
+        <a href="#projects-section"><button class='projects-btn'>View my work<i class="welcome-down fas fa-arrow-down"></i></button></a>
+  </section>
+
   <nav id="navbar">
-    <div>
-      <a href="#welcome-section" class='navbar-name'>CW</a>
-    </div>  
     <ul class='navbarlinks'>
+      <li><a href="#welcome-section">Home</a></li>
       <li><a href="#projects-section">Projects</a></li>
       <li><a href="#about-section">About</a></li>
       <li><a href="#contact-section">Contact</a></li>
     </ul>
-    <div class="links">
-      <a id="profile-link" href="https://github.com/cwang1996" target="_blank">GitHub</a>
-      <a id="profile-link" href="mailto:calvinwang@yahoo.com" target="_blank">Email</a>
-      <a id="profile-link" href="" target="_blank">Resume</a>
-    </div>
   </nav>
 
-  <section id="welcome-section">
-      <h1>Hi, I'm Calvin &#9996</h1>
-      <p class='text-auto'>A Front End Web Developer</p>
-      <a href="#contact-section"><button class='contact-btn'>Contact Me!</button></a>
-      <i class="welcome-down fas fa-arrow-down"></i>
-  </section>
-
   <section id='projects-section'>
-    <div class='project-item project-one'></div>
-    <div class='project-item project-two'></div>
-    <div class='project-item project-three'></div>
-    <div class='project-item project-four'></div>
+    <div class='projects-container'>
+      <div class='project-item project-one'>
+        <img class="project-image" src="https://assets.codepen.io/260521/internal/screenshots/pens/VPaoNP.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601011977&width=960" alt="image of survey form">
+      </div>
+      <div class='project-item project-two'>
+        <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="tribute_page">
+      </div>
+      <div class='project-item project-three'>
+        <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
+      </div>
+      <div class='project-item project-four'>
+        <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
+      </div>
+      <div class='project-item project-five'>
+        <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
+      </div>
+      <div class='project-item project-six'>
+        <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
+      </div>
+      <!-- <div class='project-item project-four'></div> -->
+    </div>
   </section>
 
   <section id="about-section">
     <h2 class='about-h2'>A short backstory</h2>
-    <p class='about-p'>Hello again, I appreciate you taking the time to scroll this far! I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.</p>
-    <p class='about-p'>I've always been fascinated with coding, but I lacked the confidence to ever pursue it. It was foolish of me to give up without even trying, but I finally bit the bullet. All I can say is, I'm completely hooked and growing more passionate and eager to learn each day. </p>
-    <div class='skills-container'>
-      <div class='skills'>
-        <div class='skills-item'>
-          <i class="skill-icon fab fa-html5"></i>
-          <span>HTML5</span>
-        </div>
-        <div class='skills-item'>
-          <i class="skill-icon fab fa-css3-alt"></i>
-          <span>CSS3</span>
-        </div>
-        <div class='skills-item'>
-          <i class="skill-icon fab fa-js-square"></i>
-          <span>JavaScript</span>
-        </div>
-        <div class='skills-item'>
-          <i class="skill-icon fab fa-react"></i>
-          <span>React</span>
-        </div>
-        <div class='skills-item'>
-          <i class="skill-icon fab fa-sass"></i>
-          <span>Sass</span>
+    <div class='about-wrap'>
+      <p class='about-p'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I've always been fascinated with coding, but I lacked the confidence to ever pursue it. It was stupid of me to give up without even trying, but I finally bit the bullet. All I can say is, I've been completely hooked and growing more passionate and eager to learn each day.</p>
+      <div class='skills-container'>
+        <div class='skills'>
+          <div class='skills-item'>
+            <i class="skill-icon fab fa-html5"></i>
+            <span>HTML5</span>
+          </div>
+          <div class='skills-item'>
+            <i class="skill-icon fab fa-css3-alt"></i>
+            <span>CSS3</span>
+          </div>
+          <div class='skills-item'>
+            <i class="skill-icon fab fa-js-square"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class='skills-item'>
+            <i class="skill-icon fab fa-react"></i>
+            <span>React</span>
+          </div>
+          <div class='skills-item'>
+            <i class="skill-icon fab fa-sass"></i>
+            <span>Sass</span>
+          </div>
         </div>
       </div>
     </div>
@@ -75,11 +95,6 @@
     <div class="contact-header">
       <h2 class='contact-h2'>Let's Connect!</h2>
       <p class='contact-p'>Have questions, or want to have a quick chat?</p>
-      <div class='contact-icons'>
-        <i class="icons fab fa-github"></i>
-        <i class="icons fab fa-linkedin"></i>
-        <i class="icons fas fa-envelope"></i>
-      </div>
     </div>
     <form class='contact-form'>
       <input type='text' placeholder='name' class='contact-name'>
@@ -88,6 +103,12 @@
       <input type='submit' class='submit-btn'>
     </form>
   </section>
+
+  <footer>
+    <ul>
+      <li>&#169; 2021 Calvin Wang</li>
+    </ul>
+  </footer>
 </div>
 
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
