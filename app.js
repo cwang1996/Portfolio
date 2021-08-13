@@ -12,3 +12,7 @@ function writeText(){
         index=1;
     }
 }
+
+const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 300
+});
