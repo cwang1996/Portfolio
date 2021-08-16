@@ -19,7 +19,7 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 // sticky navbar
 window.onscroll = function() {myFunction()}
 
-const navbar = document.getElementById('navbar');
+const navbar = document.querySelector('.navbar');
 const sticky = navbar.offsetTop;
 
 const myFunction = () => {
@@ -29,3 +29,11 @@ const myFunction = () => {
         navbar.classList.remove('sticky');
     }
 }
+
+// navbarmenu
+
+const navbarmenu = document.querySelector('.navbarmenu');
+
+navbarmenu.addEventListener('click', () => {
+    navbar.classList.toggle('shownavbar');
+})
