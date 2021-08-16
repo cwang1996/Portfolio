@@ -118,7 +118,7 @@
   #welcome-section, #about-section, #contact-section {
     background-color: #1f2833;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,7 +170,7 @@
   #projects-section {
     background-color: #1f2833;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Roboto Mono';
     display: flex;
     flex-direction: column;
@@ -195,6 +195,7 @@
     margin: 20px 20px;
     overflow: hidden;
     filter: brightness(70%);
+    flex: auto;
   }
 
   .project-image {
@@ -319,7 +320,7 @@
   /* footer */
   footer {
     background-color: #0b0c10;
-    height: 5vh;
+    min-height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -346,5 +347,27 @@
 
     #projects-section {
       height: 300vh; 
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    #projects-section {
+      height: 500vh;
+    }
+
+    .about-h2, .contact-h2 {
+      font-size: 40px;
+    }
+
+    .about-p {
+      font-size: 16px;
+    }
+
+    .contact {
+      display: none;
+    }
+
+    #navbar {
+      display: none;
     }
   }
