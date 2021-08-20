@@ -8,7 +8,7 @@
     user-select: none;
   }
 
-  body, html {
+  body {
     height: 100%;
     width: 100%;
   }
@@ -230,21 +230,13 @@
     border-radius: 5px;
     margin: 20px 20px;
     overflow: hidden;
-    filter: brightness(70%);
     flex: shrink;
     position: relative;
+    transition: filter .5s ease;
   }
 
-  .view {
-    padding: 10px 30px;
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, 100%);
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #0077B5;
+  .project-item:hover {
+    filter: brightness(50%)
   }
 
   .project-image {
@@ -259,20 +251,58 @@
     transform: scale(1.2);
   }
 
+  .overlay {
+    position: fixed; /* Positioning and size */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(27, 24, 24, 0.5); /* color */
+    visibility: hidden;
+  }
+
+  .show-overlay {
+    visibility: visible;
+  }
+
   .modal-item {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1300px;
     height: 625px;
     background-color: #111;
-    display: none;
+    z-index: -1;
+    visibility: hidden;
+    color: #c5c6c7;
+    top: -50%;
+    transition: all .5s ease-in-out;
+  }
+
+  .modal-show {
+    visibility: visible;
+    z-index: 200;
+    opacity: 1;
+    top: 50%;
+    z-index: 1;
+  }
+
+  .modal-open {
+    overflow-y: hidden;
   }
 
   .modal-container {
     display: flex;
     position: relative;
+  }
+
+  .exit, .exit2, .exit3 {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
   }
 
   .left-side {
@@ -323,7 +353,7 @@
     border: 2px solid #111;
     padding: 10px 30px;
     margin: 0px 10px;
-    color: #fff;
+    color: #c5c6c7;
     background-color: transparent;
     transition: background-color 1000ms linear;
   }
@@ -334,7 +364,7 @@
 
   /* about section  */
   #about-section {
-    height: 1000px;
+    height: 1150px;
   }
 
   .about-p {
@@ -384,13 +414,6 @@
   .about-wrap {
     align-items: center;
   }
-
-  /* .about-wrap img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-left: 60px;
-} */
 
   /* contacts section */
   #contact-section {
@@ -458,214 +481,96 @@
   }
 
   @media screen and (max-width: 1640px) {
-    #welcome-section h1 {
-      font-size: 50px;
-    }
-
-    .projects-container {
-      margin-top: 120px;
-    }
+  #welcome-section h1 {
+    font-size: 50px;
   }
 
-  @media screen and (max-width: 1130px) {
-    #welcome-section h1 {
-      font-size: 32px;
-    }
+  .projects-container {
+    margin-top: 120px;
+  }
 
-    #welcome-section p {
-      font-size: 16px;
-    }
-
-    #projects-section {
-      height: 1500px;
-    }
-
-    .projects-container {
-      width: 450px;
-      margin-top: 120px;
-    }
-
-    .contact-name, .contact-email, .contact-message{
-      width: 450px;
-   }
-
-   .about-wrap {
-    width: 450px;
-   }
-
-   .skills {
-    display: none;
-    }
-
-   .contact-p {
-     text-align: center;
-     font-size: 16px;
-    }
-
-    .contact {
-      display: none;
-    }
- 
-    .contact2 {
-      display: inline-block;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, 150%);
-     width: 100%;
-     margin: 30px 0px;
-   }
- 
-   .contact-links2 {
-     list-style-type: none;
-     display: flex;
-     justify-content: center;
-     width: 100%;
-   }
- 
-   .contact-links2 a {
-     text-decoration: none;
-     color: #fff;
-     font-size: 20px;
-     font-family: 'Roboto Mono';
-   }
- 
-   .contact-links2 {
-     display: flex;
-   }
- 
-   .icons {
-     font-size: 35px;
-     width: 100%;
-     cursor: pointer;
-     padding: 10px;
-   }
- 
-   .linkedin, .github, .email, .resume {
-     width: 100px;
-   }
- 
-   .linkedin2 {
-     color: #0077B5;
-   }
- 
-   .github2 {
-     color: #333333;
-   }
- 
-   .email2 {
-     color: #6fc2b0;
-   }
- 
-   .resume2 {
-     color: #565f69;
-   }
+  .modal-item {
+    width: 1000px;
+  }
 }
 
-  @media screen and (max-width: 450px) {
+@media screen and (max-width: 1130px) {
+  #welcome-section h1, .about-h2, .contact-h2 {
+    font-size: 32px;
+  }
 
-    #welcome-section h1 {
-      font-size: 23px;
-      text-align: center;
-    }
+  #welcome-section p, .contact-p, .about-p {
+    font-size: 16px;
+  }
 
-    #projects-section {
-      height: 1500px;
-    }
+  #projects-section {
+    height: 1500px;
+  }
 
-    .projects-btn {
-      font-size: 15px;
-      margin-top: 20px;
-    }
+  .modal-item {
+    width: 480px;
+    height: 625px;
+  }
 
-    .projects-container {
-      width: 300px;
-      margin: 0;
-    }
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .about-wrap {
-      width: 300px;
-    }
+  .left-side {
+    min-height: 200px;
+  }
 
-    .skills {
-      display: none;
-    }
+  .right-side {
+    height: 425px;
+    flex: none;
+  }
 
-    .about-h2, .contact-h2 {
-      font-size: 40px;
-    }
+  .project_summary {
+    height: 200px;
+  }
 
-    .about-p {
-      font-size: 16px;
-    }
+  .projects-container {
+    width: 450px;
+    margin-top: 120px;
+  }
 
-    .contact {
-      font-size: 10px;
-    }
+  .contact-name, .contact-email, .contact-message{
+    width: 450px;
+}
 
-    .navbar {
-      position: fixed;
-      top: 0;
-      transform: translateY(-100%);
-      height: 280px;
-      transition: transform .5s ease;
-    }
+  .about-wrap {
+  width: 450px;
+  }
 
-    .shownavbar {
-      transform: translateY(0%);
-    }
-    
-    .navbarmenu {
-      display: block;
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      z-index: 1;
-      cursor: pointer;
-    }
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .barmenu {
-      color: #c5c6c7;
-      font-size: 25px;
-    }
+  .contact-p {
+    text-align: center;
+    font-size: 16px;
+  }
 
-    .navbarlinks {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+  .contact {
+    display: none;
+  }
 
-    .contact-name, .contact-email, .contact-message{
-      width: 330px;
-   }
-
-   .contact-p {
-     width: 330px;
-     text-align: center;
-   }
-
-   .contact-links2 {
-     margin-top: -10px;
-   }
-
-   /* .contact {
-     display: none;
-   }
-
-   .contact2 {
-     display: inline-block;
+  .contact2 {
+    display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 150%);
     width: 100%;
+    margin: 30px 0px;
   }
 
   .contact-links2 {
     list-style-type: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
   }
 
@@ -684,9 +589,9 @@
     font-size: 35px;
     width: 100%;
     cursor: pointer;
-    padding: 10px; */
+    padding: 10px;
   }
-/* 
+
   .linkedin, .github, .email, .resume {
     width: 100px;
   }
@@ -705,4 +610,110 @@
 
   .resume2 {
     color: #565f69;
-  } */
+  }
+}
+
+  @media screen and (max-width: 450px) {
+
+  #welcome-section h1, .about-h2, .contact-h2 {
+    font-size: 23px;
+    text-align: center;
+  }
+
+  #projects-section {
+    height: 1500px;
+  }
+
+  .projects-btn {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .projects-container {
+    width: 300px;
+    margin: 0;
+  }
+
+  .modal-item {
+    width: 300px;
+    height: 550px;
+  }
+
+  .left-side {
+    height: 150px;
+  }
+
+  .right-side {
+    height: 350px;
+  }
+
+  .project_summary {
+    height: 100px; 
+  }
+
+  .about-wrap {
+    width: 300px;
+  }
+
+  .skills {
+    display: none;
+  }
+
+  .about-h2, .contact-h2 {
+    font-size: 40px;
+  }
+
+  .about-p {
+    font-size: 16px;
+  }
+
+  .contact {
+    font-size: 10px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+    height: 280px;
+    transition: transform .5s ease;
+  }
+
+  .shownavbar {
+    transform: translateY(0%);
+  }
+  
+  .navbarmenu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .barmenu {
+    color: #c5c6c7;
+    font-size: 25px;
+  }
+
+  .navbarlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-name, .contact-email, .contact-message{
+    width: 330px;
+  }
+
+  .contact-p {
+    width: 330px;
+    text-align: center;
+  }
+
+  .contact-links2 {
+    margin-top: -10px;
+  }
+}
