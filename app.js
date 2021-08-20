@@ -37,3 +37,56 @@ const navbarmenu = document.querySelector('.navbarmenu');
 navbarmenu.addEventListener('click', () => {
     navbar.classList.toggle('shownavbar');
 })
+
+// modal
+
+const modal = document.querySelector('.modal-1');
+const modal2 = document.querySelector('.modal-2');
+const modal3 = document.querySelector('.modal-3');
+const project1 = document.querySelector('.project-one');
+const project2 = document.querySelector('.project-two');
+const project3 = document.querySelector('.project-three');
+const body = document.getElementById('body');
+const exit = document.querySelector('.exit');
+const exit2 = document.querySelector('.exit2');
+const exit3 = document.querySelector('.exit3');
+const overlay = document.querySelector('.overlay');
+
+project1.addEventListener('click', () => {
+    modal.classList.add('modal-show');
+    body.classList.add('modal-open');
+    overlay.classList.add('show-overlay');
+})
+
+project2.addEventListener('click', () => {
+    modal2.classList.add('modal-show');
+    body.classList.add('modal-open');
+    overlay.classList.add('show-overlay');
+})
+
+project3.addEventListener('click', () => {
+    modal3.classList.add('modal-show');
+    body.classList.add('modal-open');
+    overlay.classList.add('show-overlay');
+})
+
+exit.addEventListener('click', () => {
+    modal.classList.remove('modal-show');
+    body.classList.remove('modal-open');
+    overlay.classList.remove('show-overlay');
+})
+
+exit2.addEventListener('click', () => {
+    modal2.classList.remove('modal-show');
+    body.classList.remove('modal-open');
+    overlay.classList.remove('show-overlay');
+})
+
+exit3.addEventListener('click', () => {
+    modal3.classList.remove('modal-show');
+    body.classList.remove('modal-open');
+    overlay.classList.remove('show-overlay');
+})
+
+
+
