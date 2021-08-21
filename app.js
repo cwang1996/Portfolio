@@ -31,25 +31,26 @@ const myFunction = () => {
 }
 
 // navbarmenu
-
 const navbarmenu = document.querySelector('.navbarmenu');
 
 navbarmenu.addEventListener('click', () => {
     navbar.classList.toggle('shownavbar');
 })
-
 // modal
 
 const modal = document.querySelector('.modal-1');
 const modal2 = document.querySelector('.modal-2');
 const modal3 = document.querySelector('.modal-3');
+const modal4 = document.querySelector('.modal-4');
 const project1 = document.querySelector('.project-one');
 const project2 = document.querySelector('.project-two');
 const project3 = document.querySelector('.project-three');
+const project4 = document.querySelector('.project-four');
 const body = document.getElementById('body');
 const exit = document.querySelector('.exit');
 const exit2 = document.querySelector('.exit2');
 const exit3 = document.querySelector('.exit3');
+const exit4 = document.querySelector('.exit4');
 const overlay = document.querySelector('.overlay');
 
 project1.addEventListener('click', () => {
@@ -70,6 +71,12 @@ project3.addEventListener('click', () => {
     overlay.classList.add('show-overlay');
 })
 
+project4.addEventListener('click', () => {
+    modal4.classList.add('modal-show');
+    body.classList.add('modal-open');
+    overlay.classList.add('show-overlay');
+})
+
 exit.addEventListener('click', () => {
     modal.classList.remove('modal-show');
     body.classList.remove('modal-open');
@@ -84,6 +91,12 @@ exit2.addEventListener('click', () => {
 
 exit3.addEventListener('click', () => {
     modal3.classList.remove('modal-show');
+    body.classList.remove('modal-open');
+    overlay.classList.remove('show-overlay');
+})
+
+exit4.addEventListener('click', () => {
+    modal4.classList.remove('modal-show');
     body.classList.remove('modal-open');
     overlay.classList.remove('show-overlay');
 })
