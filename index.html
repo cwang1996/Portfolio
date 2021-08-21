@@ -1,212 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-  <title>Calvin Wang</title>
-</head>
-<body id='body'>
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
 
-  <div class='contact'>
-    <ul class='contact-links'>
-      <a class='contact-items' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target="_blank"><li class='linkedin'>LinkedIn<i class="icons fab fa-linkedin"></i></li></a>
-      <a class='contact-items' href='https://github.com/cwang1996' target="_blank"><li class='github'>GitHub<i class="icons fab fa-github"></i></li></a>
-      <a class='contact-items' href='mailto: calvinwang@yahoo.com'><li class='email'>Email<i class="icons fas fa-envelope"></i></li></a>
-      <a class='contact-items' href='' target="_blank"><li class='resume'>Resume<i class="icons fas fa-file"></i></li></a>
-    </ul>
-  </div>
+  body {
+    height: 100%;
+    width: 100%;
+  }
 
-  <div class='contact2'>
-    <ul class='contact-links2'>
-      <a class='contact-items2' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target="_blank"><li class='linkedin2'><i class="icons fab fa-linkedin"></i></li></a>
-      <a class='contact-items2' href='https://github.com/cwang1996' target="_blank"><li class='github2'><i class="icons fab fa-github"></i></li></a>
-      <a class='contact-items2' href='mailto: calvinwang@yahoo.com'><li class='email2'><i class="icons fas fa-envelope"></i></li></a>
-      <a class='contact-items2' href='' target="_blank"><li class='resume2'><i class="icons fas fa-file"></i></li></a>
-    </ul>
-  </div>
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
 
-  <section id="welcome-section">
-      <h1>Hello, I'm <span class='color-name'>Calvin Wang</span> &#9996</h1>
-      <p class='text-auto'>A Front End Developer</p>
-        <a href="#projects-section"><button class='projects-btn'>View my work<i class="welcome-down fas fa-arrow-down"></i></button></a>    
-  </section>
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
 
-  <nav class="navbar">
-    <ul class='navbarlinks'>
-      <li><a href="#welcome-section">Home</a></li>
-      <li><a href="#projects-section">Projects</a></li>
-      <li><a href="#about-section">About</a></li>
-      <li><a href="#contact-section">Contact</a></li>
-    </ul>
-  </nav>
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
-  <nav class='navbarmenu'>
-    <i class="barmenu fas fa-bars"></i>
-  </nav>
+  .contact {
+    position: absolute;
+    top: 50%;
+    transform: translate(-70%, -50%);
+  }
 
-  <section id='projects-section'>
-    <div class='projects-container'>
-      <div class='project-item project-one'>
-        <img class="project-image" src="https://assets.codepen.io/260521/internal/screenshots/pens/VPaoNP.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601011977&width=960" alt="image of survey form">
-      </div>
-      <div class='project-item project-two'>
-        <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="tribute_page">
-      </div>
-      <div class='project-item project-three'>
-        <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
-      </div>
-      <div class='project-item project-four'>
-        <img src="screenshots/portfolio.png" class="project-image" alt="portfolio project">
-      </div>
-      <!-- <div class='project-item project-five'>
-        <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
-      </div>
-      <div class='project-item project-six'>
-        <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
-      </div> -->
-      <!-- <div class='project-item project-four'></div> -->
-    </div>
+  .contact2 {
+    display: none;
+  }
 
-    <div class='overlay'>
-      <div class='modal-item modal-1'>
-        <div class='modal-container'>
-          <div class='left-side'>Project Image</div>
-          <div class='right-side'>
-            <h3 class='project_name'>Project Name</h3>
-            <i class="exit fas fa-times"></i>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-            <p class='project_summary'>// project description text</p>
-            <div class='btn-links'>
-              <a class='demo-btn' href='' target='_blank'>Demo</a>
-              <a class='code-btn' href='' target='_blank'>Code</a>
-            </div>
-          </div>
-        </div> 
-      </div>
+  .contact-links {
+    list-style-type: none;
+  }
 
-      <div class='modal-item modal-2'>
-        <div class='modal-container'>
-          <div class='left-side'>Project Image</div>
-          <div class='right-side'>
-            <h3 class='project_name'>Project Name</h3>
-            <i class="exit2 fas fa-times"></i>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-            <p class='project_summary'>// project description text</p>
-            <div class='btn-links'>
-              <a class='demo-btn' href='' target='_blank'>Demo</a>
-              <a class='code-btn' href='' target='_blank'>Code</a>
-            </div>
-          </div>
-        </div> 
-      </div>
+  .contact-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Roboto Mono';
+  }
 
-      <div class='modal-item modal-3'>
-        <div class='modal-container'>
-          <div class='left-side'>Project Image</div>
-          <div class='right-side'>
-            <h3 class='project_name'>Project Name</h3>
-            <i class="exit3 fas fa-times"></i>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-            <p class='project_summary'>// project description text</p>
-            <div class='btn-links'>
-              <a class='demo-btn' href='' target='_blank'>Demo</a>
-              <a class='code-btn' href='' target='_blank'>Code</a>
-            </div>
-          </div>
-        </div> 
-      </div>
+  .contact-items {
+    transition: transform .5s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
-      <div class='modal-item modal-4'>
-        <div class='modal-container'>
-          <div class='left-side'>Project Image</div>
-          <div class='right-side'>
-            <h3 class='project_name'>Project Name</h3>
-            <i class="exit4 fas fa-times"></i>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-            <p class='project_summary'>// project description text</p>
-            <div class='btn-links'>
-              <a class='demo-btn' href='' target='_blank'>Demo</a>
-              <a class='code-btn' href='' target='_blank'>Code</a>
-            </div>
-          </div>
-        </div> 
-      </div>
-    </div>   
+  .icons {
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+  }
 
-  </section>
+  .contact-items:hover {
+    transform: translateX(70%);
+  }
 
-  <section id="about-section">
-    <h2 class='about-h2'>A short backstory</h2>
-    <div class='about-wrap'>
-      <p class='about-p'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I've always been fascinated with coding, but I lacked the confidence to ever pursue it. It was stupid of me to give up without even trying, but I finally bit the bullet. All I can say is, I've been completely hooked and growing more passionate and eager to learn each day.</p>
-      <div class='skills-container'>
-        <div class='skills'>
-          <div class='skills-item'>
-            <i class="skill-icon fab fa-html5"></i>
-            <span>HTML5</span>
-          </div>
-          <div class='skills-item'>
-            <i class="skill-icon fab fa-css3-alt"></i>
-            <span>CSS3</span>
-          </div>
-          <div class='skills-item'>
-            <i class="skill-icon fab fa-js-square"></i>
-            <span>JavaScript</span>
-          </div>
-          <div class='skills-item'>
-            <i class="skill-icon fab fa-react"></i>
-            <span>React</span>
-          </div>
-          <div class='skills-item'>
-            <i class="skill-icon fab fa-sass"></i>
-            <span>Sass</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  .linkedin, .github, .email, .resume {
+    width: 180px;
+    padding: 15px;
+  }
 
-  <section id="contact-section">
-    <div class="contact-header">
-      <h2 class='contact-h2'>Let's Connect!</h2>
-      <p class='contact-p'>Have questions, or want to have a quick chat?</p>
-    </div>
-    <form class='contact-form'>
-      <input type='text' placeholder='name' class='contact-name'>
-      <input type='text' placeholder='email' class='contact-email'>
-      <textarea placeholder='message' class='contact-message'></textarea>
-      <input type='submit' class='submit-btn'>
-    </form>
-  </section>
+  .linkedin {
+    background-color: #0077B5;
+  }
 
-  <footer>
-    <ul>
-      <li>&#169; 2021 Calvin Wang</li>
-    </ul>
-  </footer>
+  .github {
+    background-color: #333333;
+  }
 
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src='app.js'></script>
-</body>
-</html>
+  .email {
+    background-color: #6fc2b0;
+  }
+
+  .resume {
+    background-color: #565f69;
+  }
+
+  .resume i {
+    margin-right: 5px;
+  }
+
+  /* navbar styling */
+  .navbar {
+    background: #0b0c10;
+    width: 100%;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 3px solid #6fc2b0;
+    z-index: 1;
+  }
+
+  .navbarmenu {
+    display: none;
+  }
+
+  .navbarlinks {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .navbar li {
+    padding: 19.2px;
+  }
+  
+  .navbar a {
+    color: #66fcf1;
+    font-family: 'Roboto Mono', sans-serif;
+    text-decoration: none;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  /* welcome section */
+  #welcome-section, #about-section, #contact-section {
+    background-color: #1f2833;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono';
+    color: #c5c6c7;
+  }
+
+  #welcome-section {
+    min-height: 100vh;
+  }
+
+  .color-name {
+    color: #66fcf1;
+  }
+
+  #welcome-section h1 {
+    font-size: 60px;
+    color: #c5c6c7;
+  }
+
+  #welcome-section p {
+    font-size: 23px;
+    margin-top: 20px;
+  }
+
+  .welcome-down {
+    margin-left: 25px;
+    transform: rotate(-90deg);
+    transition: transform .5s ease;
+  }
+
+  .welcome-down:hover {
+    transform: rotate(0deg);
+  }
+
+   .submit-btn, .projects-btn {
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 1px solid #45A29E;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 1000ms linear;
+  }
+
+  .projects-btn:hover, .submit-btn:hover {
+    background-color: #45A29E;
+  }
+
+  /* projects section*/
+  #projects-section {
+    background-color: #1f2833;
+    width: 100%;
+    height: 1200px;
+    font-family: 'Roboto Mono';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1300px;
+  }
+
+  .project-item {
+    width: 500px;
+    height: 400px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 20px 20px;
+    overflow: hidden;
+    flex: shrink;
+    position: relative;
+    transition: filter .5s ease;
+  }
+
+  .project-item:hover {
+    filter: brightness(50%)
+  }
+
+  .project-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+  }
+
+  .project-image:hover {
+    transform: scale(1.2);
+  }
+
+  .overlay {
+    position: fixed; /* Positioning and size */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(27, 24, 24, 0.5); /* color */
+    visibility: hidden;
+  }
+
+  .show-overlay {
+    visibility: visible;
+  }
+
+  .modal-item {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 625px;
+    background-color: #111;
+    z-index: -1;
+    visibility: hidden;
+    color: #c5c6c7;
+    top: -50%;
+    transition: all .5s ease-in-out;
+  }
+
+  .modal-show {
+    visibility: visible;
+    z-index: 200;
+    opacity: 1;
+    top: 50%;
+    z-index: 1;
+  }
+
+  .modal-open {
+    overflow-y: hidden;
+  }
+
+  .modal-container {
+    display: flex;
+    position: relative;
+  }
+
+  .exit, .exit2, .exit3, .exit4 {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .left-side {
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .right-side {
+    flex: 1;
+    background-color: #404040;
+    width: 100%;
+    height: 625px;
+    padding: 10px;
+  }
+
+  .right-side ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .right-side ul li {
+    padding: 10px;
+    border: 1px solid #c5c6c7;
+    margin: 20px 10px;
+    font-size: 16px;
+  }
+
+  .project_summary {
+    overflow-y: scroll;
+    font-size: 16px;
+    letter-spacing: .05em;
+    height: 400px;
+    line-height: 2;
+  }
+
+  .btn-links {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .demo-btn, .code-btn {
+    text-decoration: none;
+    border: 2px solid #111;
+    padding: 10px 30px;
+    margin: 0px 10px;
+    color: #c5c6c7;
+    background-color: transparent;
+    transition: background-color 1000ms linear;
+  }
+
+  .demo-btn:hover, .code-btn:hover {
+    background-color: #45A29E;
+  }
+
+  /* about section  */
+  #about-section {
+    height: 1000px
+  }
+
+  .about-p {
+    font-size: 18px;
+    color: #c5c6c7;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .about-wrap {
+    width: 800px;
+  }
+
+  .about-h2, .contact-h2{
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .skills-item {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  .skills-item span {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .skill-icon {
+    font-size: 50px;
+  }
+
+  .about-wrap {
+    align-items: center;
+  }
+
+  /* contacts section */
+  #contact-section {
+    height: 1000px;
+  }
+
+  .contact-header h2, .contact-header p {
+    margin-top: 20px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-p {
+    font-size: 18px;
+  }
+
+  .contact-name, .contact-email, .contact-message{
+    width: 500px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Roboto Mono';
+    padding: 10px;
+    resize: none;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+  }
+
+  .contact-message {
+    width: 500px;
+    height: 200px;
+  }
+
+  .contact-icons {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  /* footer */
+  footer {
+    background-color: #0b0c10;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Mono';
+  }
+
+  footer ul {
+    list-style-type: none;
+  }
+
+  footer ul li {
+    color: #c5c6c7;
+  }
+
+  @media screen and (max-width: 1640px) {
+  #welcome-section h1 {
+    font-size: 50px;
+  }
+
+  .projects-container {
+    margin-top: 120px;
+  }
+
+  .modal-item {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  #welcome-section h1, .about-h2, .contact-h2 {
+    font-size: 32px;
+  }
+
+  #welcome-section p, .contact-p, .about-p {
+    font-size: 16px;
+  }
+
+  #projects-section {
+    height: 2000px;
+  }
+
+  #about-section {
+    height: 1150px
+  }
+
+  .modal-item {
+    width: 480px;
+    height: 625px;
+  }
+
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-side {
+    min-height: 200px;
+  }
+
+  .right-side {
+    height: 425px;
+    flex: none;
+  }
+
+  .project_summary {
+    height: 200px;
+  }
+
+  .projects-container {
+    width: 450px;
+    margin-top: 120px;
+  }
+
+  .contact-name, .contact-email, .contact-message{
+    width: 450px;
+}
+
+  .about-wrap {
+  width: 450px;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .contact2 {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    width: 100%;
+    margin: 30px 0px;
+  }
+
+  .contact-links2 {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-links2 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Roboto Mono';
+  }
+
+  .contact-links2 {
+    display: flex;
+  }
+
+  .icons {
+    font-size: 35px;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .linkedin, .github, .email, .resume {
+    width: 100px;
+  }
+
+  .linkedin2 {
+    color: #0077B5;
+  }
+
+  .github2 {
+    color: #333333;
+  }
+
+  .email2 {
+    color: #6fc2b0;
+  }
+
+  .resume2 {
+    color: #565f69;
+  }
+}
+
+  @media screen and (max-width: 450px) {
+
+  #welcome-section h1, .about-h2, .contact-h2 {
+    font-size: 23px;
+    text-align: center;
+  }
+
+  #projects-section {
+    height: 1500px;
+  }
+
+  .projects-btn {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .projects-container {
+    width: 300px;
+    margin: 0;
+  }
+
+  .modal-item {
+    width: 300px;
+    height: 550px;
+  }
+
+  .left-side {
+    height: 150px;
+  }
+
+  .right-side {
+    height: 350px;
+  }
+
+  .project_summary {
+    height: 100px; 
+  }
+
+  .about-wrap {
+    width: 300px;
+  }
+
+  .skills {
+    display: none;
+  }
+
+  .about-h2, .contact-h2 {
+    font-size: 40px;
+  }
+
+  .about-p {
+    font-size: 16px;
+  }
+
+  .contact {
+    font-size: 10px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+    height: 280px;
+    transition: transform .5s ease;
+  }
+
+  .shownavbar {
+    transform: translateY(0%);
+  }
+  
+  .navbarmenu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .barmenu {
+    color: #c5c6c7;
+    font-size: 25px;
+  }
+
+  .navbarlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-name, .contact-email, .contact-message{
+    width: 330px;
+  }
+
+  .contact-p {
+    width: 330px;
+    text-align: center;
+  }
+
+  .contact-links2 {
+    margin-top: -10px;
+  }
+}
