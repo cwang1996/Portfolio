@@ -32,8 +32,13 @@
 
   <section id="welcome-section">
       <h1>Hello, I'm <span class='color-name'>Calvin Wang</span> &#9996</h1>
-      <p class='text-auto'>A Front End Developer</p>
-        <a href="#projects-section"><button class='projects-btn'>View my work<i class="welcome-down fas fa-arrow-down"></i></button></a>    
+      <div class='welcome-wrap'>
+        <p>A Front End Developer currently living in Sacramento, CA. Passionate in creating responsive and engaging user experiences.  </p>
+      </div>
+      <div class='button-container'>  
+        <a href="#projects-section">
+          <button class='projects-btn'>View my work<i class="welcome-down fas fa-arrow-down"></i></button></a>    
+      </div>
   </section>
 
   <nav class="navbar">
@@ -51,17 +56,21 @@
 
   <section id='projects-section'>
     <div class='projects-container'>
-      <div class='project-item project-one'>
-        <img class="project-image" src="https://assets.codepen.io/260521/internal/screenshots/pens/VPaoNP.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601011977&width=960" alt="image of survey form">
+      <div class='project-item'>
+        <img class="project-image" src="screenshots/portfolio.png" alt="image of survey form">
+        <button class='view-btn project-one'>View Project</button>
       </div>
-      <div class='project-item project-two'>
+      <div class='project-item'>
         <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="tribute_page">
+        <button class='view-btn project-two'>View Project</button>
       </div>
-      <div class='project-item project-three'>
+      <div class='project-item'>
         <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
+        <button class='view-btn project-three'>View Project</button>
       </div>
-      <div class='project-item project-four'>
+      <div class='project-item'>
         <img src="screenshots/portfolio.png" class="project-image" alt="portfolio project">
+        <button class='view-btn project-four'>View Project</button>
       </div>
       <!-- <div class='project-item project-five'>
         <img src="https://assets.codepen.io/260521/internal/screenshots/pens/RKRbwL.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1601012121&width=960" class="project-image" alt="image of product landing">
@@ -159,27 +168,27 @@
   <section id="about-section">
     <h2 class='about-h2'>A short backstory</h2>
     <div class='about-wrap'>
-      <p class='about-p'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I've always been fascinated with coding, but I lacked the confidence to ever pursue it. It was stupid of me to give up without even trying, but I finally bit the bullet. All I can say is, I've been completely hooked and growing more passionate and eager to learn each day.</p>
+      <p class='about-p'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I began my journey in coding in 2021. I wanted to challenge myself to do something outside of my comfort zone, and coding seemed like the perfect fit, as I have always been fascinated with how it worked. I've been completely hooked and growing more passionate and eager to learn each day. </p>
       <div class='skills-container'>
         <div class='skills'>
           <div class='skills-item'>
-            <i class="skill-icon fab fa-html5"></i>
+            <i class="skill-icon fab fa-html5" style='color:#DE4B25;'></i>
             <span>HTML5</span>
           </div>
           <div class='skills-item'>
-            <i class="skill-icon fab fa-css3-alt"></i>
+            <i class="skill-icon fab fa-css3-alt" style='color:#3E95CF;'></i>
             <span>CSS3</span>
           </div>
           <div class='skills-item'>
-            <i class="skill-icon fab fa-js-square"></i>
+            <i class="skill-icon fab fa-js-square" style='color:#EFD81D;'></i>
             <span>JavaScript</span>
           </div>
           <div class='skills-item'>
-            <i class="skill-icon fab fa-react"></i>
+            <i class="skill-icon fab fa-react" style='color:#5ED3F3;'></i>
             <span>React</span>
           </div>
           <div class='skills-item'>
-            <i class="skill-icon fab fa-sass"></i>
+            <i class="skill-icon fab fa-sass" style='color:#C76494;'></i>
             <span>Sass</span>
           </div>
         </div>
@@ -201,8 +210,11 @@
   </section>
 
   <footer>
+    <a href="#welcome-section"><i class="uparrow fas fa-angle-double-up"></i></a>
     <ul>
       <li>&#169; 2021 Calvin Wang</li>
+      <li>Email: calvinwang@yahoo.com</li>
+      <li>Cell: (626)688-8768</li>
     </ul>
   </footer>
 
