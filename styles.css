@@ -675,8 +675,16 @@
   @media screen and (max-width: 450px) {
 
   #welcome-section h1, .about-h2, .contact-h2 {
-    font-size: 23px;
+    font-size: 27px;
     text-align: center;
+  }
+
+  #welcome-section p {
+    font-size: 14px;
+  }
+
+  .welcome-wrap {
+    width: 350px;
   }
 
   #projects-section {
@@ -716,15 +724,16 @@
   }
 
   .skills {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-h2, .contact-h2 {
-    font-size: 40px;
+    font-size: 27px;
   }
 
   .about-p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .contact {
