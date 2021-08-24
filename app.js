@@ -19,10 +19,17 @@ const myFunction = () => {
 
 // navbarmenu
 const navbarmenu = document.querySelector('.navbarmenu');
+const navitems = document.querySelectorAll('.nav-item');
 
 navbarmenu.addEventListener('click', () => {
     navbar.classList.toggle('shownavbar');
 })
+
+navitems.forEach((item) => {
+    item.addEventListener('click', () => {
+        navbar.classList.remove('shownavbar');
+    })
+});
 
 // modal
 const modal = document.querySelector('.modal-1');
