@@ -12,6 +12,7 @@
   body, html {
     height: 100%;
     width: 100%;
+    background-color: #1f2833;
   }
 
   /* width */
@@ -189,10 +190,6 @@
     transition: transform 1s ease;
   }
 
-  /* .welcome-down-hover {
-    transform: rotate(0deg);
-  } */
-
    .submit-btn, .projects-btn {
     margin-top: 30px;
     padding: 10px 30px;
@@ -271,7 +268,7 @@
     backface-visibility: hidden;
   }
 
-  .project-item:hover .project-image {
+  .project-item:hover .project-image{
     filter:brightness(50%);
     transform: scale(1.2);
   }
@@ -393,7 +390,7 @@
 
   /* about section  */
   #about-section {
-    height: 1000px
+    height: 1100px
   }
 
   .about-p {
@@ -574,16 +571,16 @@
   }
 
   .left-side {
-    min-height: 200px;
+    min-height: 320px;
   }
 
   .right-side {
-    height: 425px;
+    height: 380px;
     flex: none;
   }
 
   .project_summary {
-    height: 200px;
+    height: 150px;
   }
 
   .projects-container {
@@ -697,9 +694,13 @@
     height: 1800px;
   }
 
-  .projects-btn {
+  .projects-btn{
     font-size: 15px;
     margin-top: 20px;
+  }
+
+  .submit-btn {
+    font-size: 15px;
   }
 
   .projects-container {
@@ -710,18 +711,19 @@
   .modal-item {
     width: 300px;
     height: 550px;
+    font-size: 14px;
   }
 
   .left-side {
-    height: 150px;
+    min-height: 270px;
   }
 
   .right-side {
-    height: 350px;
+    height: 280px;
   }
 
   .project_summary {
-    height: 100px; 
+    height: 80px; 
   }
 
   .about-wrap {
