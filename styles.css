@@ -9,7 +9,7 @@
     user-select: none;
   }
 
-  body {
+  body, html {
     height: 100%;
     width: 100%;
   }
@@ -88,11 +88,11 @@
   }
 
   .email {
-    background-color: #6fc2b0;
+    background-color: #4055cc;
   }
 
   .resume {
-    background-color: #565f69;
+    background-color: #8f2640;
   }
 
   .resume i {
@@ -157,11 +157,16 @@
     justify-content: center;
     align-items: center;
     font-family: 'Poppins';
-    color: #c5c6c7;
+    color: #fff;
   }
 
   #welcome-section {
     min-height: 100vh;
+  }
+
+  .welcome-wrap {
+    width: 700px;
+    text-align: center;
   }
 
   .color-name {
@@ -170,23 +175,23 @@
 
   #welcome-section h1 {
     font-size: 60px;
-    color: #c5c6c7;
+    color: #fff;
   }
 
   #welcome-section p {
-    font-size: 23px;
+    font-size: 18px;
     margin-top: 20px;
   }
 
   .welcome-down {
     margin-left: 25px;
     transform: rotate(-90deg);
-    transition: transform .5s ease;
+    transition: transform 1s ease;
   }
 
-  .welcome-down:hover {
+  /* .welcome-down-hover {
     transform: rotate(0deg);
-  }
+  } */
 
    .submit-btn, .projects-btn {
     margin-top: 30px;
@@ -203,6 +208,10 @@
     background-color: #45A29E;
   }
 
+  .button-container:hover .welcome-down {
+    transform: rotate(0deg);
+  }
+
   /* projects section*/
   #projects-section {
     background-color: #1f2833;
@@ -214,6 +223,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
   }
 
   .projects-container {
@@ -223,6 +233,22 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 1300px;
+  }
+
+  .view-btn {
+    color: #fff;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px;
+    border: 2px solid #45A29E;
+    background-color: #1f2833;
+    font-family: 'Poppins';
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity .5s ease;
+    opacity: 0;
   }
 
   .project-item {
@@ -237,20 +263,21 @@
     transition: filter .5s ease;
   }
 
-  .project-item:hover {
-    filter: brightness(50%)
-  }
-
   .project-image {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    cursor: pointer;
     transition: transform .5s ease-in-out;
+    backface-visibility: hidden;
   }
 
-  .project-image:hover {
+  .project-item:hover .project-image {
+    filter:brightness(50%);
     transform: scale(1.2);
+  }
+
+  .project-item:hover .view-btn {
+    opacity: 1;
   }
 
   .overlay {
@@ -277,7 +304,7 @@
     background-color: #111;
     z-index: -1;
     visibility: hidden;
-    color: #c5c6c7;
+    color: #fff;
     top: -50%;
     transition: all .5s ease-in-out;
   }
@@ -330,7 +357,7 @@
 
   .right-side ul li {
     padding: 10px;
-    border: 1px solid #c5c6c7;
+    border: 1px solid #fff;
     margin: 20px 10px;
     font-size: 16px;
   }
@@ -355,7 +382,7 @@
     border: 2px solid #111;
     padding: 10px 30px;
     margin: 0px 10px;
-    color: #c5c6c7;
+    color: #fff;
     background-color: transparent;
     transition: background-color 1000ms linear;
   }
@@ -371,7 +398,7 @@
 
   .about-p {
     font-size: 18px;
-    color: #c5c6c7;
+    color: #fff;
     margin-top: 20px;
     text-align: left;
     line-height: 1.5;
@@ -447,7 +474,11 @@
     padding: 10px;
     resize: none;
     background-color: #0b0c10;
-    color: #c5c6c7;
+    color: #fff;
+  }
+
+  ::placeholder {
+    color: #fff;
   }
 
   .contact-message {
@@ -467,19 +498,37 @@
   /* footer */
   footer {
     background-color: #0b0c10;
-    min-height: 5vh;
+    min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Poppins';
+    position: relative;
+  }
+
+  .uparrow {
+    color: #1f2833;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    border: none;
+    padding: 5px 10px;
+    background-color: #66fcf1;
+    cursor: pointer;
   }
 
   footer ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
   }
 
   footer ul li {
-    color: #c5c6c7;
+    color: #fff;
+    font-size: 18px;
+    padding: 30px;
   }
 
   @media screen and (max-width: 1640px) {
@@ -498,11 +547,15 @@
 
 @media screen and (max-width: 1130px) {
   #welcome-section h1, .about-h2, .contact-h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   #welcome-section p, .contact-p, .about-p {
     font-size: 16px;
+  }
+
+  .welcome-wrap {
+    width: 450px;
   }
 
   #projects-section {
@@ -543,7 +596,7 @@
 
   .contact-name, .contact-email, .contact-message{
     width: 450px;
-}
+  }
 
   .about-wrap {
   width: 450px;
@@ -568,7 +621,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 150%);
+    transform: translate(-50%, 200%);
     width: 100%;
     margin: 30px 0px;
   }
@@ -611,11 +664,11 @@
   }
 
   .email2 {
-    color: #6fc2b0;
+    color: #4055cc;
   }
 
   .resume2 {
-    color: #565f69;
+    color: #8f2640;
   }
 }
 
@@ -627,6 +680,7 @@
   }
 
   #projects-section {
+    overflow: hidden;
     height: 1800px;
   }
 
@@ -699,7 +753,7 @@
   }
 
   .barmenu {
-    color: #c5c6c7;
+    color: #fff;
     font-size: 25px;
   }
 
