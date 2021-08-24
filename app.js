@@ -1,16 +1,3 @@
-//auto text
-const text_auto = document.querySelector('.text-auto')
-
-let text = "A Front End Developer";
-let index = 1;
-
-setInterval(writeText, 100)
-
-function writeText(){
-    text_auto.innerText = text.slice(0, index);
-    index++;
-}
-
 // SmoothScroll Script
 const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 500
@@ -36,8 +23,8 @@ const navbarmenu = document.querySelector('.navbarmenu');
 navbarmenu.addEventListener('click', () => {
     navbar.classList.toggle('shownavbar');
 })
-// modal
 
+// modal
 const modal = document.querySelector('.modal-1');
 const modal2 = document.querySelector('.modal-2');
 const modal3 = document.querySelector('.modal-3');
@@ -46,11 +33,11 @@ const project1 = document.querySelector('.project-one');
 const project2 = document.querySelector('.project-two');
 const project3 = document.querySelector('.project-three');
 const project4 = document.querySelector('.project-four');
-const body = document.getElementById('body');
 const exit = document.querySelector('.exit');
 const exit2 = document.querySelector('.exit2');
 const exit3 = document.querySelector('.exit3');
 const exit4 = document.querySelector('.exit4');
+const body = document.getElementById('body');
 const overlay = document.querySelector('.overlay');
 
 project1.addEventListener('click', () => {
