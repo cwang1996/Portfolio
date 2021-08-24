@@ -128,7 +128,7 @@
     padding: 19.2px;
   }
   
-  .navbar a {
+  .nav-item {
     color: #66fcf1;
     font-family: 'Poppins';
     text-decoration: none;
@@ -532,9 +532,6 @@
   }
 
   @media screen and (max-width: 1640px) {
-  #welcome-section h1 {
-    font-size: 50px;
-  }
 
   .projects-container {
     margin-top: 120px;
@@ -621,9 +618,18 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 200%);
+    transform: translate(-50%, 280%);
     width: 100%;
     margin: 30px 0px;
+  }
+
+  .contact-items2 {
+    margin: 0px 5px;
+    transition: transform .5s ease;
+  }
+
+  .contact-items2:hover {
+    transform: scale(1.1);
   }
 
   .contact-links2 {
@@ -636,8 +642,6 @@
   .contact-links2 a {
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
-    font-family: 'Poppins';
   }
 
   .contact-links2 {
@@ -645,30 +649,31 @@
   }
 
   .icons {
-    font-size: 35px;
+    font-size: 25px;
     width: 100%;
     cursor: pointer;
     padding: 10px;
   }
 
-  .linkedin, .github, .email, .resume {
-    width: 100px;
+  .linkedin2, .github2, .email2, .resume2 {
+    width: 60px;
+    text-align: center;
   }
 
   .linkedin2 {
-    color: #0077B5;
+    background-color: #0077B5;
   }
 
   .github2 {
-    color: #333333;
+    background-color: #333333;
   }
 
   .email2 {
-    color: #4055cc;
+    background-color: #4055cc;
   }
 
   .resume2 {
-    color: #8f2640;
+    background-color: #8f2640;
   }
 }
 
@@ -784,5 +789,13 @@
 
   .contact-links2 {
     margin-top: -10px;
+  }
+
+  .icons {
+    font-size: 20px;
+  }
+
+  .contact2 {
+    margin: 50px 0px;
   }
 }
