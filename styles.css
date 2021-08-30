@@ -704,7 +704,7 @@
 
   .projects-btn{
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .submit-btn {
@@ -718,16 +718,26 @@
 
   .modal-item {
     width: 300px;
-    height: 550px;
+    height: 725px;
+    font-size: 14px;
+  }
+
+  .modal-item ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-item ul li {
+    margin: 10px 10px;
     font-size: 14px;
   }
 
   .left-side {
-    min-height: 270px;
+    min-height: 375px;
   }
 
   .right-side {
-    height: 280px;
+    height: 350px;
   }
 
   .project_summary {
