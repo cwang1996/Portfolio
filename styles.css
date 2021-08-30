@@ -337,6 +337,10 @@
     cursor: pointer;
   }
 
+  .exit3 {
+    color: #111;
+  }
+
   .left-side {
     flex: 2;
     width: 100%;
