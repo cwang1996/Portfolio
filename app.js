@@ -94,6 +94,3 @@ exit4.addEventListener('click', () => {
     body.classList.remove('modal-open');
     overlay.classList.remove('show-overlay');
 })
-
-
-
