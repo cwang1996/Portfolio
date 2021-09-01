@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name='description' content='This is my portfolio showcasing my various projects. The website is divided into four sections: the welcome, projects, about, and contact sections. Links to my linkedin and github are provided as well as a copy of my online pdf resume. My email is also provided as another option of contacting me. My projects are showcased through the use of a pop-up modal. The modal will show the title of my project, the description, skills I utilzied to make the project, and a link to the live demo and github code. The contact section is a submit form using netlify that can be used to send a message directly to me.'>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +14,10 @@
 
   <div class='contact'>
     <ul class='contact-links'>
-      <a class='contact-items' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target="_blank"><li class='linkedin'>LinkedIn<i class="icons fab fa-linkedin"></i></li></a>
-      <a class='contact-items' href='https://github.com/cwang1996' target="_blank"><li class='github'>GitHub<i class="icons fab fa-github"></i></li></a>
-      <a class='contact-items' href='mailto: calvinwang@yahoo.com'><li class='email'>Email<i class="icons fas fa-envelope"></i></li></a>
-      <a class='contact-items' href='' target="_blank"><li class='resume'>Resume<i class="icons fas fa-file"></i></li></a>
+      <a class='contact-items' tabindex='0' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target="_blank"><li class='linkedin'>LinkedIn<i class="icons fab fa-linkedin"></i></li></a>
+      <a class='contact-items' tabindex='0' href='https://github.com/cwang1996' target="_blank"><li class='github'>GitHub<i class="icons fab fa-github"></i></li></a>
+      <a class='contact-items' tabindex='0' href='mailto: calvinwang@yahoo.com'><li class='email'>Email<i class="icons fas fa-envelope"></i></li></a>
+      <a class='contact-items' tabindex='0' href='https://github.com/cwang1996' target="_blank"><li class='resume'>Resume<i class="icons fas fa-file"></i></li></a>
     </ul>
   </div>
 
@@ -204,15 +205,15 @@
       <p class='contact-p'>Have questions, or want to have a quick chat?</p>
     </div>
     <form class='contact-form'>
-      <input type='text' placeholder='name' class='contact-name'>
-      <input type='text' placeholder='email' class='contact-email'>
-      <textarea placeholder='message' class='contact-message'></textarea>
+      <input type='text' placeholder='name' class='contact-name' required>
+      <input type='text' placeholder='email' class='contact-email' required>
+      <textarea placeholder='message' class='contact-message' required></textarea>
       <input type='submit' class='submit-btn'>
     </form>
   </section>
 
   <footer>
-    <a href="#welcome-section"><i class="uparrow fas fa-angle-double-up"></i></a>
+    <a href="#welcome-section"><i class="uparrow fas fa-angle-double-up" tabindex='0'></i></a>
     <ul>
       <li>&#169; 2021 Calvin Wang</li>
       <!-- <li>Email: calvinwang@yahoo.com</li>
