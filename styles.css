@@ -481,10 +481,12 @@
     resize: none;
     background-color: #0b0c10;
     color: #fff;
+    font-size: 16px;
   }
 
   ::placeholder {
-    color: #fff;
+    color: rgb(192, 192, 192);
+    font-size: 13px;
   }
 
   .contact-message {
