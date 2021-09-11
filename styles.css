@@ -103,7 +103,7 @@
   .navbar {
     background: #0b0c10;
     width: 100%;
-    height: 53px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -235,6 +235,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: 20px;
     width: 1100px;
   }
 
@@ -267,7 +268,7 @@
   }
 
   .project-image {
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 100%;
     height: 100%;
     transition: transform .5s ease-in-out;
@@ -275,7 +276,7 @@
   }
 
   .project-img {
-    object-fit: contain;
+    /* object-fit: contain; */
     width: 100%;
     height: 100%;
   }
@@ -340,7 +341,7 @@
     height: 625px;
   }
 
-  .exit, .exit2, .exit3, .exit4 {
+  .exit, .exit2, .exit3, .exit4, .exit5 {
     position: absolute;
     right: 13px;
     top: 8px;
@@ -377,12 +378,20 @@
     font-size: 16px;
   }
 
+  .project_name {
+    font-size: 25px;
+    text-align: left;
+    padding: 0px 10px;
+  }
+
   .project_summary {
     overflow-y: scroll;
     font-size: 16px;
     letter-spacing: .05em;
     height: 400px;
     line-height: 2;
+    border: 1px solid #404040;
+    padding: 10px;
   }
 
   .btn-links {
@@ -599,6 +608,11 @@
     flex: none;
   }
 
+  .right-side ul li {
+    padding: 10px;
+    font-size: 14px;
+  }
+
   .project_summary {
     height: 150px;
   }
@@ -722,13 +736,33 @@
   }
 
   .projects-container {
-    width: 300px;
+    width: 325px;
     margin: 0;
+  }
+
+  .view-btn {
+    transition: all .5s ease;
+    opacity: 0;
+    z-index: -999;
+  }
+
+  .project-item:hover .project-image{
+    z-index: 999;
+  }
+
+  .project-item:hover .view-btn {
+    opacity: 1;
+    z-index: 999;
+  }
+
+  .project-item:focus-visible .view-btn {
+    opacity: 1;
+    z-index: 999;
   }
 
   .modal-item {
     width: 300px;
-    height: 650px;
+    height: 700px;
     font-size: 14px;
   }
 
@@ -740,23 +774,28 @@
 
   .modal-item ul li {
     margin: 10px 10px;
+    padding: 7px;
     font-size: 13px;
   }
 
-  .modal-4 .project_summary {
-    height: 140px;
+  .modal-4 .project_summary, .modal-5 .project_summary {
+    height: 100px;
   }
 
   .left-side {
-    min-height: 350px;
+    min-height: 325px;
   }
 
   .right-side {
-    height: 325px;
+    height: 375px;
+  }
+
+  .right-side ul li {
+    font-size: 12px;
   }
 
   .project_summary {
-    height: 80px; 
+    height: 120px; 
   }
 
   .about-wrap {
