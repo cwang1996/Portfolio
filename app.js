@@ -19,15 +19,31 @@ const myFunction = () => {
 
 // navbarmenu
 const navbarmenu = document.querySelector('.navbarmenu');
+const showmenu = document.querySelector('.barmenu');
+const exitmenu = document.querySelector('.exitmenu');
 const navitems = document.querySelectorAll('.nav-item');
 
-navbarmenu.addEventListener('click', () => {
+showmenu.addEventListener('click', () => {
     navbar.classList.toggle('shownavbar');
+    showmenu.classList.add('hidemenu');
+    exitmenu.classList.add('showmenu');
+})
+
+exitmenu.addEventListener('click', () => {
+    navbar.classList.toggle('shownavbar');
+    showmenu.classList.remove('hidemenu');
+    exitmenu.classList.remove('showmenu');
 })
 
 navitems.forEach((item) => {
     item.addEventListener('click', () => {
         navbar.classList.remove('shownavbar');
+        exitmenu.classList.remove('showmenu');
+        if(showmenu.classList.contains('showmenu')){
+            showmenu.classList.add('hidemenu');
+        } else {
+            showmenu.classList.remove('hidemenu');
+        }
     })
 });
 
@@ -109,3 +125,23 @@ exit5.addEventListener('click', () => {
     body.classList.remove('modal-open');
     overlay.classList.remove('show-overlay');
 })
+
+// animations
+
+const projectitems = document.querySelectorAll('.project-item');
+
+function checkSlide() {
+    projectitems.forEach(projectitem => {
+    const slideInAt = (window.scrollY + window.innerHeight) - projectitem.height / 2;
+    const imageBottom = projectitem.offsetTop + projectitem.height;
+    const isHalfShown = slideInAt > projectitem.offsetTop;
+    const isNoScrolledPast = window.scrollY < imageBottom;
+
+        if(isHalfShown && isNoScrolledPast) {
+            projectitems.classList.add('active');
+            console.log('test');
+        } 
+    })
+}
+
+window.addEventListener('scroll', checkSlide());
