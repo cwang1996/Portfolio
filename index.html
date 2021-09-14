@@ -13,10 +13,10 @@
   <body id='body'>
     <div class='contact'>
       <ul class='contact-links'>
-        <a class='contact-items' tabindex='0' href='https://www.linkedin.com/in/cwang1996/' target='_blank'><ul><li class='linkedin'>LinkedIn<i class='icons fab fa-linkedin'></i></li></ul></a>
-        <a class='contact-items' tabindex='0' href='https://github.com/cwang1996' target='_blank'><ul><li class='github'>GitHub<i class='icons fab fa-github'></i></li></ul></a>
-        <a class='contact-items' tabindex='0' href='mailto: calvinwang@yahoo.com'><ul><li class='email'>Email<i class='icons fas fa-envelope'></i></li></ul></a>
-        <a class='contact-items' tabindex='0' href='resume/CalvinWang_Resume.pdf' target='_blank'><ul><li class='resume'>Resume<i class='icons fas fa-file'></i></li></ul></a>
+        <a class='contact-items peek' tabindex='0' href='https://www.linkedin.com/in/cwang1996/' target='_blank'><ul><li class='linkedin'>LinkedIn<i class='icons fab fa-linkedin'></i></li></ul></a>
+        <a class='contact-items peek' tabindex='0' href='https://github.com/cwang1996' target='_blank'><ul><li class='github'>GitHub<i class='icons fab fa-github'></i></li></ul></a>
+        <a class='contact-items peek' tabindex='0' href='mailto: calvinwang@yahoo.com'><ul><li class='email'>Email<i class='icons fas fa-envelope'></i></li></ul></a>
+        <a class='contact-items peek' tabindex='0' href='resume/CalvinWang_Resume.pdf' target='_blank'><ul><li class='resume'>Resume<i class='icons fas fa-file'></i></li></ul></a>
       </ul>
     </div>
 
@@ -31,13 +31,13 @@
 
 
     <section id='welcome-section'>
-        <h1>Hello, I'm <span class='color-name'>Calvin Wang</span> &#9996</h1>
+        <h1 class='welcome-title popout'>Hello, I'm <span class='color-name'>Calvin Wang</span> <span class="wave">&#9996</span></h1>
         <div class='welcome-wrap'>
-          <p>A Front End Developer currently living in Sacramento, CA. Passionate in creating responsive and engaging user experiences.  </p>
+          <p class='welcome-p popout'>A Front End Developer currently living in Sacramento, CA. Passionate in creating responsive and engaging user experiences.  </p>
         </div>
         <div class='button-container'>  
           <a href='#projects-section'>
-            <button class='projects-btn'>View my work<i class='welcome-down fas fa-arrow-down'></i></button></a>    
+            <button class='projects-btn popout'>View my work<i class='welcome-down fas fa-arrow-down'></i></button></a>    
         </div>
     </section>
 
@@ -52,13 +52,17 @@
 
     <nav class='navbarmenu'>
       <i class='barmenu fas fa-bars'></i>
+      <i class='exitmenu fas fa-times'></i>
     </nav>
 
     <section id='projects-section'>
+      <!-- <div class='projects-header'>
+        <h2 class='projects-title'>My Projects</h2>
+      </div> -->
       <div class='projects-c'>
         <div class='projects-container'>
           <div class='project-item'>
-            <img class='project-image' src='screenshots/ecommerce.png' alt='image of survey form'>
+            <img class='project-image' src='screenshots/ecommerce.webp' alt='image of survey form'>
             <button class='view-btn project-one'>View Project</button>
           </div>
           <div class='project-item'>
@@ -66,16 +70,16 @@
             <button class='view-btn project-two'>View Project</button>
           </div>
           <div class='project-item'>
-            <img src='screenshots/covid-tracker.png' class='project-image' alt='covid tracker'>
+            <img src='screenshots/covid-tracker.webp' class='project-image' alt='covid tracker'>
             <button class='view-btn project-three'>View Project</button>
           </div>
           <div class='project-item'>
-            <img src='screenshots/portfolio.webp' class='project-image' alt='portfolio project'>
-            <button class='view-btn project-four'>View Project</button>
+            <img src='screenshots/shopify.webp' class='project-image' alt='shopify project'>
+            <button class='view-btn project-five'>View Project</button>
           </div> 
           <div class='project-item'>
-            <img src='screenshots/shopify.png' class='project-image' alt='shopify project'>
-            <button class='view-btn project-five'>View Project</button>
+            <img src='screenshots/portfolio.webp' class='project-image' alt='portfolio project'>
+            <button class='view-btn project-four'>View Project</button>
           </div> 
         </div>
     </div>
@@ -83,7 +87,7 @@
       <div class='overlay'>
         <div class='modal-item modal-1'>
           <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src='screenshots/ecommerce.png'></div>
+            <div class='left-side'><img class='project-img' src='screenshots/ecommerce.webp'></div>
             <div class='right-side'>
               <h3 class='project_name'>Rainforest</h3>
               <i class='exit fas fa-times'></i>
@@ -169,7 +173,7 @@
 
         <div class='modal-item modal-5'>
           <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src='screenshots/shopify.png'></div>
+            <div class='left-side'><img class='project-img' src='screenshots/shopify.webp'></div>
             <div class='right-side'>
               <h3 class='project_name'>Shopify</h3>
               <i class='exit5 fas fa-times'></i>
@@ -195,7 +199,7 @@
     <section id='about-section'>
       <h2 class='about-h2'>A short backstory</h2>
       <div class='about-wrap'>
-        <p class='about-p'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I began my journey in coding in 2021. I wanted to challenge myself to do something outside of my comfort zone, and coding seemed like the perfect fit, as I have always been fascinated with how it worked. I've been completely hooked and growing more passionate and eager to learn each day. </p>
+        <p class='about-p'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I began my journey in coding in 2021. I wanted to challenge myself to do something outside of my comfort zone, and coding seemed like the perfect fit, as I have always been fascinated with how it worked. I've been completely hooked and growing more passionate and eager to learn each day.<br><br> My goal is to learn all the foundational concepts for Front-End development, and eventually dive into the back-end. Ultimately, I want to challenge myself to learn something new everyday and have consistent growth in my technical skillset. </p>
         <div class='skills-container'>
           <div class='skills'>
             <div class='skills-item'>
