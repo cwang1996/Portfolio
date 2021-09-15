@@ -143,6 +143,10 @@
     text-decoration: none;
   }
 
+  .placeholder {
+    height: 60px;
+  }
+
   .sticky {
     position: fixed;
     top: 0;
@@ -323,6 +327,45 @@
     transition: filter .5s ease;
   }
 
+  .scroll-animation {
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+  }
+
+  .scrolled {
+    opacity: 1;
+  }
+
+  .scrolled.project-left{
+    animation: slide-in-left 1s ease-in-out both;
+  }
+
+  .scrolled.project-right {
+    animation: slide-in-right 1s ease-in-out both;
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
   .active {
     transform: translate(-50%);
   }
@@ -477,12 +520,17 @@
 
   /* about section  */
   #about-section {
-    height: 900px;
+    height: 950px;
+  }
+
+  .about-fade {
+    /* opacity: 0; */
+    transition: opacity 2s ease-in-out;
   }
 
   .about-p {
     font-size: 18px;
-    color: #fff;
+    color: #d7ecff;;
     margin-top: 20px;
     text-align: left;
     line-height: 1.5;
@@ -539,7 +587,7 @@
 
   /* contacts section */
   #contact-section {
-    height: 750px;
+    height: 950px;
   }
 
   .contact-header h2, .contact-header p {
@@ -555,6 +603,7 @@
 
   .contact-p {
     font-size: 18px;
+    color: #d7ecff;
   }
 
   .contact-name, .contact-email, .contact-message{
@@ -566,7 +615,7 @@
     font-family: 'Poppins';
     padding: 10px;
     resize: none;
-    background-color: #0b0c10;
+    background-color: #18191a;
     color: #fff;
     font-size: 16px;
   }
