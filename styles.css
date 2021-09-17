@@ -329,7 +329,7 @@
 
   .scroll-animation {
     transition: opacity 2s ease-in-out;
-    opacity: 0;
+/*     opacity: 0; */
   }
 
   .scrolled {
@@ -530,7 +530,7 @@
 
   .about-p {
     font-size: 18px;
-    color: #d7ecff;;
+    color: #d7ecff;
     margin-top: 20px;
     text-align: left;
     line-height: 1.5;
