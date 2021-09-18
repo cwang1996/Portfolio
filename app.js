@@ -4,40 +4,44 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 // sticky navbar
-window.onscroll = function() {myFunction()}
+// window.onscroll = function() {myFunction()}
 
-const navbar = document.querySelector('.navbar');
-const sticky = navbar.offsetTop;
+// const sticky = navbar.offsetTop;
 
-const myFunction = () => {
-    if(window.pageYOffset >= sticky) {
-        navbar.classList.add('sticky')
-    } else {
-        navbar.classList.remove('sticky');
-    }
-}
+// const myFunction = () => {
+//     if(window.pageYOffset >= sticky) {
+//         navbar.classList.add('sticky')
+//     } else {
+//         navbar.classList.remove('sticky');
+//     }
+// }
 
 // navbarmenu
+const navbar = document.querySelector('.navbar');
+const navbar2 = document.querySelector('.navbar2');
 const navbarmenu = document.querySelector('.navbarmenu');
 const showmenu = document.querySelector('.barmenu');
 const exitmenu = document.querySelector('.exitmenu');
 const navitems = document.querySelectorAll('.nav-item');
+const navblur = document.querySelector('.navblur');
 
 showmenu.addEventListener('click', () => {
-    navbar.classList.toggle('shownavbar');
+    navbar2.classList.toggle('shownavbar');
     showmenu.classList.add('hidemenu');
     exitmenu.classList.add('showmenu');
+    navblur.classList.add('navbluradd');
 })
 
 exitmenu.addEventListener('click', () => {
-    navbar.classList.toggle('shownavbar');
+    navbar2.classList.toggle('shownavbar');
     showmenu.classList.remove('hidemenu');
     exitmenu.classList.remove('showmenu');
+    navblur.classList.remove('navbluradd');
 })
 
 navitems.forEach((item) => {
     item.addEventListener('click', () => {
-        navbar.classList.remove('shownavbar');
+        navbar2.classList.remove('shownavbar');
         exitmenu.classList.remove('showmenu');
         if(showmenu.classList.contains('showmenu')){
             showmenu.classList.add('hidemenu');
@@ -129,19 +133,3 @@ exit5.addEventListener('click', () => {
 // animations
 
 const projectitems = document.querySelectorAll('.project-item');
-
-function checkSlide() {
-    projectitems.forEach(projectitem => {
-    const slideInAt = (window.scrollY + window.innerHeight) - projectitem.height / 2;
-    const imageBottom = projectitem.offsetTop + projectitem.height;
-    const isHalfShown = slideInAt > projectitem.offsetTop;
-    const isNoScrolledPast = window.scrollY < imageBottom;
-
-        if(isHalfShown && isNoScrolledPast) {
-            projectitems.classList.add('active');
-            console.log('test');
-        } 
-    })
-}
-
-window.addEventListener('scroll', checkSlide());
