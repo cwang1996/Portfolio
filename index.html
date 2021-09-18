@@ -22,27 +22,28 @@
 
     <div class='contact2'>
       <ul class='contact-links2'>
-        <a class='contact-items2 linkedin2' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target='_blank'><li class='linkedin2'><i class='icons fab fa-linkedin'></i></li></a>
-        <a class='contact-items2 github2' href='https://github.com/cwang1996' target='_blank'><li class='github2'><i class='icons fab fa-github'></i></li></a>
-        <a class='contact-items2 email2' href='mailto: calvinwang@yahoo.com'><li class='email2'><i class='icons fas fa-envelope'></i></li></a>
-        <a class='contact-items2 resume2' href='resume/CalvinWang_Resume.pdf' target='_blank'><li class='resume2'><i class='icons fas fa-file'></i></li></a>
+        <a class='contact-items2 linkedin2' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target='_blank'><li class='linkedin2'><i class='icons2 fab fa-linkedin'></i></li></a>
+        <a class='contact-items2 github2' href='https://github.com/cwang1996' target='_blank'><li class='github2'><i class='icons2 fab fa-github'></i></li></a>
+        <a class='contact-items2 email2' href='mailto: calvinwang@yahoo.com'><li class='email2'><i class='icons2 fas fa-envelope'></i></li></a>
+        <a class='contact-items2 resume2' href='resume/CalvinWang_Resume.pdf' target='_blank'><li class='resume2'><i class='icons2 fas fa-file'></i></li></a>
       </ul>
     </div>
 
-
-    <section id='welcome-section'>
-        <h1 class='welcome-title popout'>Hello, I'm <span class='color-name'>Calvin Wang</span> <span class="wave">&#9996</span></h1>
-        <div class='welcome-wrap'>
-          <p class='welcome-p popout'>A Front End Developer currently living in Sacramento, CA. Passionate in creating responsive and engaging user experiences.  </p>
+    <div class='placeholder'>
+      <nav class='navbar'>
+        <div class="navbar-logo">
+        <span><a href="#home">CW</a></span>
         </div>
-        <div class='button-container'>  
-          <a href='#projects-section'>
-            <button class='projects-btn popout'>View my work<i class='welcome-down fas fa-arrow-down'></i></button></a>    
-        </div>
-    </section>
+        <ul class='navbarlinks'>
+          <li><a class='nav-item' href='#welcome-section'>Home</a></li>
+          <li><a class='nav-item' href='#projects-section'>Projects</a></li>
+          <li><a class='nav-item' href='#about-section'>About</a></li>
+          <li><a class='nav-item' href='#contact-section'>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  <div class='placeholder'>
-    <nav class='navbar'>
+    <nav class='navbar2'>
       <ul class='navbarlinks'>
         <li><a class='nav-item' href='#welcome-section'>Home</a></li>
         <li><a class='nav-item' href='#projects-section'>Projects</a></li>
@@ -50,17 +51,39 @@
         <li><a class='nav-item' href='#contact-section'>Contact</a></li>
       </ul>
     </nav>
-  </div>
 
-    <nav class='navbarmenu'>
+    <div>
       <i class='barmenu fas fa-bars'></i>
       <i class='exitmenu fas fa-times'></i>
-    </nav>
+    </div>
+
+<div class='navblur'>
+  <div class="navbarmenu">
+    <div class="navbar-logo2">
+      <span><a href="#home">CW</a></span>
+    </div>
+  </div>
+    <section id='welcome-section'>
+        <div class="scrolldown">
+          <span class="scrollspan">scroll down</span>
+        </div>
+        <div class='wrap'>
+          <h1 class='welcome-title popout'>Hello, I'm <span class='color-name'>Calvin Wang</span> <span class="wave">&#9996</span></h1>
+          <div class='welcome-wrap'>
+            <p class='welcome-p popout'>A Front End Developer currently living in Sacramento, CA. Passionate in creating responsive and engaging user experiences.  </p>
+          </div>
+          <div class='button-container'>  
+            <a href='#projects-section'>
+              <button class='projects-btn popout'>View my work<i class='welcome-down fas fa-arrow-down'></i></button></a>    
+          </div>
+        </div>
+    </section>
 
     <section id='projects-section'>
-      <!-- <div class='projects-header'>
-        <h2 class='projects-title'>My Projects</h2>
-      </div> -->
+      <div class="scrolldown">
+        <span class="scrollspan">who am i?</span>
+      </div>
+      <h2 class='projects-title'>Projects</h2>
       <div class='projects-c content'>
         <div class='projects-container'>
           <div class='project-item project-left scroll-animation'>
@@ -193,10 +216,12 @@
           </div> 
         </div>
       </div>   
-
     </section>
 
     <section id='about-section'>
+      <div class="scrolldown aboutdown">
+        <span class="scrollspan">get in touch</span>
+      </div>
       <h2 class='about-h2 scroll-animation'>A short backstory</h2>
       <div class='about-wrap'>
         <p class='about-p scroll-animation'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I began my journey in coding in 2021. I wanted to challenge myself to do something outside of my comfort zone, and coding seemed like the perfect fit, as I have always been fascinated with how it worked. I've been completely hooked and growing more passionate and eager to learn each day.<br><br> My goal is to learn all the foundational concepts for Front-End development, and eventually dive into the back-end. Ultimately, I want to challenge myself to learn something new everyday and have consistent growth in my technical skillset. </p>
@@ -228,6 +253,9 @@
     </section>
 
     <section id='contact-section'>
+      <div class="scrolldown">
+        <span class="scrollspan">thank you</span>
+      </div>
       <div class='contact-header'>
         <h2 class='contact-h2'>Let's Connect!</h2>
         <p class='contact-p'>Have questions, or want to have a quick chat?</p>
@@ -238,14 +266,26 @@
         <textarea placeholder='Message' class='contact-message' name='message' required></textarea>
         <input type='submit' class='submit-btn'>
       </form>
+
+      <div class='contact2'>
+        <ul class='contact-links2'>
+          <a class='contact-items2 linkedin2' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target='_blank'><li class='linkedin2'><i class='icons2 fab fa-linkedin'></i></li></a>
+          <a class='contact-items2 github2' href='https://github.com/cwang1996' target='_blank'><li class='github2'><i class='icons2 fab fa-github'></i></li></a>
+          <a class='contact-items2 email2' href='mailto: calvinwang@yahoo.com'><li class='email2'><i class='icons2 fas fa-envelope'></i></li></a>
+          <a class='contact-items2 resume2' href='resume/CalvinWang_Resume.pdf' target='_blank'><li class='resume2'><i class='icons2 fas fa-file'></i></li></a>
+        </ul>
+      </div>
+
     </section>
 
     <footer>
       <a href='#welcome-section'><i class='uparrow fas fa-angle-double-up' tabindex='0'></i></a>
       <ul>
         <li>&#169; 2021 Calvin Wang</li>
-      </ul>
+      </ul>   
     </footer>
+
+</div>
 
       <script src='https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js'></script>
       <script src='app.js'></script>
