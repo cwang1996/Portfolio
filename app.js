@@ -4,44 +4,40 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 // sticky navbar
-// window.onscroll = function() {myFunction()}
+window.onscroll = function() {myFunction()}
 
-// const sticky = navbar.offsetTop;
+const navbar = document.querySelector('.navbar');
+const sticky = navbar.offsetTop;
 
-// const myFunction = () => {
-//     if(window.pageYOffset >= sticky) {
-//         navbar.classList.add('sticky')
-//     } else {
-//         navbar.classList.remove('sticky');
-//     }
-// }
+const myFunction = () => {
+    if(window.pageYOffset >= sticky) {
+        navbar.classList.add('sticky')
+    } else {
+        navbar.classList.remove('sticky');
+    }
+}
 
 // navbarmenu
-const navbar = document.querySelector('.navbar');
-const navbar2 = document.querySelector('.navbar2');
 const navbarmenu = document.querySelector('.navbarmenu');
 const showmenu = document.querySelector('.barmenu');
 const exitmenu = document.querySelector('.exitmenu');
 const navitems = document.querySelectorAll('.nav-item');
-const navblur = document.querySelector('.navblur');
 
 showmenu.addEventListener('click', () => {
-    navbar2.classList.toggle('shownavbar');
+    navbar.classList.toggle('shownavbar');
     showmenu.classList.add('hidemenu');
     exitmenu.classList.add('showmenu');
-    navblur.classList.add('navbluradd');
 })
 
 exitmenu.addEventListener('click', () => {
-    navbar2.classList.toggle('shownavbar');
+    navbar.classList.toggle('shownavbar');
     showmenu.classList.remove('hidemenu');
     exitmenu.classList.remove('showmenu');
-    navblur.classList.remove('navbluradd');
 })
 
 navitems.forEach((item) => {
     item.addEventListener('click', () => {
-        navbar2.classList.remove('shownavbar');
+        navbar.classList.remove('shownavbar');
         exitmenu.classList.remove('showmenu');
         if(showmenu.classList.contains('showmenu')){
             showmenu.classList.add('hidemenu');
@@ -132,4 +128,46 @@ exit5.addEventListener('click', () => {
 
 // animations
 
-const projectitems = document.querySelectorAll('.project-item');
+const projectitems = document.querySelectorAll('.scroll-animation');
+
+// const scrollOffset = 100;
+
+// const elementInView = (el, offset = 0) => {
+//     const elementTop = el.getBoundingClientRect().top;
+//     return(
+//         elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
+//     );
+// };
+
+// const displayScrollElement = () => {
+//     projectitems.classList.add('scrolled');
+// }
+
+// const handleScrollAnimation = () => {
+//         if(elementInView(projectitems, scrollOffset)) {
+//             displayScrollElement();
+//         }
+// }
+
+const elementInView = (el, offset = 0) => {
+    const elementTop = el.getBoundingClientRect().top;
+    return(
+        elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
+    );
+};
+
+const displayScrollElement = (element) => {
+    element.classList.add('scrolled');
+}
+
+const handleScrollAnimation = () => {
+    projectitems.forEach((el) => {
+        if(elementInView(el, 1.25)) {
+            displayScrollElement(el);
+        }
+    })
+}
+
+window.addEventListener('scroll', () => {
+    handleScrollAnimation();
+})
