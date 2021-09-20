@@ -6,7 +6,7 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 // sticky navbar
 // window.onscroll = function() {myFunction()}
 
-// const navbar = document.querySelector('.navbar');
+const navbar = document.getElementById('navbar');
 // const sticky = navbar.offsetTop;
 
 // const myFunction = () => {
@@ -171,3 +171,27 @@ const handleScrollAnimation = () => {
 window.addEventListener('scroll', () => {
     handleScrollAnimation();
 })
+
+//navbar function
+
+let prevScrollPos = window.scrollY;
+window.onscroll = function() {
+    let currentScrollPos = window.scrollY;
+
+    if(window.scrollY > 50) {
+        navbar.classList.remove('navbartransparent');
+        navbar.classList.add('navbarbg');
+    } else {
+        navbar.classList.add('navbartransparent');
+    }
+
+    if(prevScrollPos > currentScrollPos) {
+        navbar.classList.remove('shownavbar');
+    } else {
+        navbar.classList.add('shownavbar');
+    }
+    prevScrollPos = currentScrollPos;
+}
+
+let y = window.pageYOffset;
+console.log(y);
