@@ -183,6 +183,7 @@ window.onscroll = function() {
         navbar.classList.add('navbarbg');
     } else {
         navbar.classList.add('navbartransparent');
+        navbar.classList.remove('navbarbg');
     }
 
     if(prevScrollPos > currentScrollPos) {
