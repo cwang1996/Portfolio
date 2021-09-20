@@ -1,16 +1,17 @@
 
-  <!DOCTYPE html>
-  <html lang='en'>
-  <head>
-    <meta name='description' content='This is my portfolio showcasing my various projects. The website is divided into four sections: the welcome, projects, about, and contact sections. Links to my linkedin and github are provided as well as a copy of my online pdf resume. My email is also provided as another option of contacting me. My projects are showcased through the use of a pop-up modal. The modal will show the title of my project, the description, skills I utilzied to make the project, and a link to the live demo and github code. The contact section is a submit form using netlify that can be used to send a message directly to me.'>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.3/css/all.css' integrity='sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk' crossorigin='anonymous'>
-    <link rel='stylesheet' href='styles.css'>
-    <title>Calvin Wang</title>
-  </head>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta name='description' content='This is my portfolio showcasing my various projects. The website is divided into four sections: the welcome, projects, about, and contact sections. Links to my linkedin and github are provided as well as a copy of my online pdf resume. My email is also provided as another option of contacting me. My projects are showcased through the use of a pop-up modal. The modal will show the title of my project, the description, skills I utilzied to make the project, and a link to the live demo and github code. The contact section is a submit form using netlify that can be used to send a message directly to me.'>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.3/css/all.css' integrity='sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk' crossorigin='anonymous'>
+  <link rel='stylesheet' href='styles.css'>
+  <title>Calvin Wang</title>
+</head>
   <body id='body'>
+    <!-- links to linkedin, github, mail, resume -->
     <div class='contact'>
       <ul class='contact-links'>
         <a class='contact-items peek' tabindex='0' href='https://www.linkedin.com/in/cwang1996/' target='_blank'><ul><li class='linkedin'>LinkedIn<i class='icons fab fa-linkedin'></i></li></ul></a>
@@ -20,6 +21,7 @@
       </ul>
     </div>
 
+    <!-- secondary links for resized mobile view -->
     <div class='contact2'>
       <ul class='contact-links2'>
         <a class='contact-items2 linkedin2' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target='_blank'><li class='linkedin2'><i class='icons2 fab fa-linkedin'></i></li></a>
@@ -29,6 +31,7 @@
       </ul>
     </div>
 
+    <!-- placeholder to prevent elements from moving up after resizing -->
     <div class='placeholder'>
       <nav id='navbar' class='navbar'>
         <div class='navbar-logo fade-in'>
@@ -43,6 +46,7 @@
       </nav>
     </div>
 
+    <!-- secondary navbar for resized mobile view -->
     <nav class='navbar2'>
       <ul class='navbarlinks'>
         <li><a class='nav-item' href='#top-page'>Home</a></li>
@@ -52,17 +56,21 @@
       </ul>
     </nav>
 
+    <!-- icons to open and close the navbar in mobile view -->
     <div>
       <i class='barmenu fas fa-bars'></i>
       <i class='exitmenu fas fa-times'></i>
     </div>
 
-<div class='navblur'>
-  <div class='navbarmenu'>
-    <div class='navbar-logo2'>
-      <span><a id='top-page' href='#top-page'>CW</a></span>
+  <!-- blurs page after navbar is opened in mobile view -->
+  <div class='navblur'>
+    <div class='navbarmenu'>
+      <div class='navbar-logo2'>
+        <span><a id='top-page' href='#top-page'>CW</a></span>
+      </div>
     </div>
-  </div>
+
+    <!-- welcome/homepage section -->
     <section id='welcome-section'>
         <div class='scrolldown fade-in'>
           <span class='scrollspan'>scroll down</span>
@@ -79,6 +87,7 @@
         </div>
     </section>
 
+    <!-- projects section -->
     <section id='projects-section'>
       <div class='scrolldown fade-in'>
         <span class='scrollspan'>who am i?</span>
@@ -109,6 +118,7 @@
         </div>
     </div>
 
+      <!-- modals for the projects -->
       <div class='overlay'>
         <div class='modal-item modal-1'>
           <div class='modal-container'>
@@ -204,8 +214,6 @@
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>React.js</li>
-                <!-- <li>React Router</li>
-                <li>React Hooks</li> -->
               </ul>
               <p class='project_summary'>This website was built using React.js. React Router and React Hooks were used to create the functionality of the link components, and the stylized components were used to create a responsive and engaging user experience. </p>
               <div class='btn-links'>
@@ -218,6 +226,7 @@
       </div>   
     </section>
 
+    <!-- about section -->
     <section id='about-section'>
       <div class='scrolldown aboutdown'>
         <span class='scrollspan'>get in touch</span>
@@ -252,6 +261,7 @@
       </div>
     </section>
 
+    <!-- contact section -->
     <section id='contact-section'>
       <div class='scrolldown'>
         <span class='scrollspan'>thank you</span>
@@ -275,17 +285,16 @@
           <a class='contact-items2 resume2' href='resume/CalvinWang_Resume.pdf' target='_blank'><li class='resume2'><i class='icons2 fas fa-file'></i></li></a>
         </ul>
       </div>
-
     </section>
 
+    <!-- footer section -->
     <footer>
       <a href='#welcome-section'><i class='uparrow fas fa-angle-double-up' tabindex='0'></i></a>
       <ul>
         <li>&#169; 2021 Calvin Wang</li>
       </ul>   
     </footer>
-
-</div>
+  </div>
 
       <script src='https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js'></script>
       <script src='app.js'></script>
