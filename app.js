@@ -4,18 +4,18 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 // sticky navbar
-window.onscroll = function() {myFunction()}
+// window.onscroll = function() {myFunction()}
 
-const navbar = document.querySelector('.navbar');
-const sticky = navbar.offsetTop;
+// const navbar = document.querySelector('.navbar');
+// const sticky = navbar.offsetTop;
 
-const myFunction = () => {
-    if(window.pageYOffset >= sticky) {
-        navbar.classList.add('sticky')
-    } else {
-        navbar.classList.remove('sticky');
-    }
-}
+// const myFunction = () => {
+//     if(window.pageYOffset >= sticky) {
+//         navbar.classList.add('sticky')
+//     } else {
+//         navbar.classList.remove('sticky');
+//     }
+// }
 
 // navbarmenu
 const navbarmenu = document.querySelector('.navbarmenu');
