@@ -3,20 +3,6 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 500
 });
 
-// sticky navbar
-// window.onscroll = function() {myFunction()}
-
-const navbar = document.getElementById('navbar');
-// const sticky = navbar.offsetTop;
-
-// const myFunction = () => {
-//     if(window.pageYOffset >= sticky) {
-//         navbar.classList.add('sticky')
-//     } else {
-//         navbar.classList.remove('sticky');
-//     }
-// }
-
 // navbarmenu
 const navbarmenu = document.querySelector('.navbarmenu');
 const showmenu = document.querySelector('.barmenu');
@@ -47,7 +33,7 @@ navitems.forEach((item) => {
     })
 });
 
-// modal
+// modal items
 const modal = document.querySelector('.modal-1');
 const modal2 = document.querySelector('.modal-2');
 const modal3 = document.querySelector('.modal-3');
@@ -127,28 +113,9 @@ exit5.addEventListener('click', () => {
 })
 
 // animations
-
 const projectitems = document.querySelectorAll('.scroll-animation');
 
-// const scrollOffset = 100;
-
-// const elementInView = (el, offset = 0) => {
-//     const elementTop = el.getBoundingClientRect().top;
-//     return(
-//         elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
-//     );
-// };
-
-// const displayScrollElement = () => {
-//     projectitems.classList.add('scrolled');
-// }
-
-// const handleScrollAnimation = () => {
-//         if(elementInView(projectitems, scrollOffset)) {
-//             displayScrollElement();
-//         }
-// }
-
+// trigger animations when scroll
 const elementInView = (el, offset = 0) => {
     const elementTop = el.getBoundingClientRect().top;
     return(
@@ -172,8 +139,8 @@ window.addEventListener('scroll', () => {
     handleScrollAnimation();
 })
 
-//navbar function
-
+//when scrolling down navbar will disappear, when scrolling up navbar will appear with a background
+const navbar = document.getElementById('navbar');
 let prevScrollPos = window.scrollY;
 window.onscroll = function() {
     let currentScrollPos = window.scrollY;
@@ -193,6 +160,3 @@ window.onscroll = function() {
     }
     prevScrollPos = currentScrollPos;
 }
-
-let y = window.pageYOffset;
-console.log(y);
