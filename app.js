@@ -4,26 +4,31 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 // navbarmenu
+const navbar2 = document.querySelector('.navbar2');
+const navbar = document.getElementById('navbar');
 const navbarmenu = document.querySelector('.navbarmenu');
 const showmenu = document.querySelector('.barmenu');
 const exitmenu = document.querySelector('.exitmenu');
 const navitems = document.querySelectorAll('.nav-item');
+const navblur = document.querySelector('.navblur');
 
 showmenu.addEventListener('click', () => {
-    navbar.classList.toggle('shownavbar');
+    navbar2.classList.toggle('shownavbar');
     showmenu.classList.add('hidemenu');
     exitmenu.classList.add('showmenu');
+    navblur.classList.add('navbluradd');
 })
 
 exitmenu.addEventListener('click', () => {
-    navbar.classList.toggle('shownavbar');
+    navbar2.classList.toggle('shownavbar');
     showmenu.classList.remove('hidemenu');
     exitmenu.classList.remove('showmenu');
+    navblur.classList.remove('navbluradd');
 })
 
 navitems.forEach((item) => {
     item.addEventListener('click', () => {
-        navbar.classList.remove('shownavbar');
+        navbar2.classList.remove('shownavbar');
         exitmenu.classList.remove('showmenu');
         if(showmenu.classList.contains('showmenu')){
             showmenu.classList.add('hidemenu');
@@ -140,7 +145,6 @@ window.addEventListener('scroll', () => {
 })
 
 //when scrolling down navbar will disappear, when scrolling up navbar will appear with a background
-const navbar = document.getElementById('navbar');
 let prevScrollPos = window.scrollY;
 window.onscroll = function() {
     let currentScrollPos = window.scrollY;
