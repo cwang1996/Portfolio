@@ -17,6 +17,7 @@ showmenu.addEventListener('click', () => {
     showmenu.classList.add('hidemenu');
     exitmenu.classList.add('showmenu');
     navblur.classList.add('navbluradd');
+    body.classList.add('noscroll');
 })
 
 exitmenu.addEventListener('click', () => {
@@ -24,12 +25,15 @@ exitmenu.addEventListener('click', () => {
     showmenu.classList.remove('hidemenu');
     exitmenu.classList.remove('showmenu');
     navblur.classList.remove('navbluradd');
+    body.classList.remove('noscroll');
 })
 
 navitems.forEach((item) => {
     item.addEventListener('click', () => {
         navbar2.classList.remove('shownavbar');
         exitmenu.classList.remove('showmenu');
+        navblur.classList.remove('navbluradd');
+        body.classList.remove('noscroll');
         if(showmenu.classList.contains('showmenu')){
             showmenu.classList.add('hidemenu');
         } else {
