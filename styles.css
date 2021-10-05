@@ -41,6 +41,7 @@ body, html {
   z-index: 1;
 }
 
+/* second contact bar mobile view*/
 .contact2 {
   display: none;
 }
