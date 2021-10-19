@@ -70,11 +70,11 @@ project1.addEventListener('click', () => {
     overlay.classList.add('show-overlay');
 })
 
-project2.addEventListener('click', () => {
-    modal2.classList.add('modal-show');
-    body.classList.add('modal-open');
-    overlay.classList.add('show-overlay');
-})
+// project2.addEventListener('click', () => {
+//     modal2.classList.add('modal-show');
+//     body.classList.add('modal-open');
+//     overlay.classList.add('show-overlay');
+// })
 
 project3.addEventListener('click', () => {
     modal3.classList.add('modal-show');
@@ -106,11 +106,11 @@ exit.addEventListener('click', () => {
     overlay.classList.remove('show-overlay');
 })
 
-exit2.addEventListener('click', () => {
-    modal2.classList.remove('modal-show');
-    body.classList.remove('modal-open');
-    overlay.classList.remove('show-overlay');
-})
+// exit2.addEventListener('click', () => {
+//     modal2.classList.remove('modal-show');
+//     body.classList.remove('modal-open');
+//     overlay.classList.remove('show-overlay');
+// })
 
 exit3.addEventListener('click', () => {
     modal3.classList.remove('modal-show');
