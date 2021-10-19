@@ -886,7 +886,8 @@ footer ul li {
 
 @media screen and (max-width: 875px) {
   #projects-section {
-    height: 2400px;
+    /* height: 2400px; */
+    height: 2000px;
   }
 
   .projects-container {
