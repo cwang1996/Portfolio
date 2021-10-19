@@ -335,6 +335,10 @@ body, html {
   color: #66fcf1;
 }
 
+.scrolldowns {
+  bottom: 100px;
+}
+
 .aboutdown {
   bottom: -1800px;
 }
@@ -359,6 +363,7 @@ body, html {
   background-color: #25303d;
   width: 100%;
   height: 1050px;
+  /* height: 1450px; */
   font-family: 'Poppins';
   position: relative;
   overflow: hidden;
@@ -462,6 +467,7 @@ body, html {
   height: 100vh;
   background-color: rgba(27, 24, 24, 0.5); /* color */
   visibility: hidden;
+  z-index: 999;
 }
 
 .show-overlay {
@@ -500,7 +506,7 @@ body, html {
   height: 625px;
 }
 
-.exit, .exit2, .exit3, .exit4, .exit5 {
+.exit, .exit2, .exit3, .exit4, .exit5, .exit6{
   position: absolute;
   right: 13px;
   top: 8px;
@@ -880,7 +886,7 @@ footer ul li {
 
 @media screen and (max-width: 875px) {
   #projects-section {
-    height: 2000px;
+    height: 2400px;
   }
 
   .projects-container {
