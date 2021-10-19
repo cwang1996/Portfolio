@@ -48,16 +48,19 @@ const modal2 = document.querySelector('.modal-2');
 const modal3 = document.querySelector('.modal-3');
 const modal4 = document.querySelector('.modal-4');
 const modal5 = document.querySelector('.modal-5');
+const modal6 = document.querySelector('.modal-6');
 const project1 = document.querySelector('.project-one');
 const project2 = document.querySelector('.project-two');
 const project3 = document.querySelector('.project-three');
 const project4 = document.querySelector('.project-four');
 const project5 = document.querySelector('.project-five');
+const project6 = document.querySelector('.project-six');
 const exit = document.querySelector('.exit');
 const exit2 = document.querySelector('.exit2');
 const exit3 = document.querySelector('.exit3');
 const exit4 = document.querySelector('.exit4');
 const exit5 = document.querySelector('.exit5');
+const exit6 = document.querySelector('.exit6');
 const body = document.getElementById('body');
 const overlay = document.querySelector('.overlay');
 
@@ -91,6 +94,12 @@ project5.addEventListener('click', () => {
     overlay.classList.add('show-overlay');
 })
 
+project6.addEventListener('click', () => {
+    modal6.classList.add('modal-show');
+    body.classList.add('modal-open');
+    overlay.classList.add('show-overlay');
+})
+
 exit.addEventListener('click', () => {
     modal.classList.remove('modal-show');
     body.classList.remove('modal-open');
@@ -117,6 +126,12 @@ exit4.addEventListener('click', () => {
 
 exit5.addEventListener('click', () => {
     modal5.classList.remove('modal-show');
+    body.classList.remove('modal-open');
+    overlay.classList.remove('show-overlay');
+})
+
+exit6.addEventListener('click', () => {
+    modal6.classList.remove('modal-show');
     body.classList.remove('modal-open');
     overlay.classList.remove('show-overlay');
 })
