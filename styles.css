@@ -493,7 +493,7 @@ body, html {
   visibility: visible;
   z-index: 200;
   opacity: 1;
-  top: 45%;
+  top: 50%;
 }
 
 .modal-open {
@@ -1099,7 +1099,7 @@ footer ul li {
   font-size: 13px;
 }
 
-.modal-2 .project_summary {
+.modal-3 .project_summary, .modal-4 .project_summary{
     height: 100px;
 }
 
