@@ -1099,8 +1099,8 @@ footer ul li {
   font-size: 13px;
 }
 
-.modal-4 .project_summary, .modal-5 .project_summary {
-  height: 100px;
+.modal-1 .project_summary, .modal-4 .project_summary, .modal-5 .project_summary {
+  height: 150px;
 }
 
 .left-side {
