@@ -3,7 +3,7 @@ const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 500
 });
 
-// navbarmenu
+// navbarmenu selectors
 const navbar2 = document.querySelector('.navbar2');
 const navbar = document.getElementById('navbar');
 const navbarmenu = document.querySelector('.navbarmenu');
