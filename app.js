@@ -64,11 +64,11 @@ const exit6 = document.querySelector('.exit6');
 const body = document.getElementById('body');
 const overlay = document.querySelector('.overlay');
 
-project1.addEventListener('click', () => {
-    modal.classList.add('modal-show');
-    body.classList.add('modal-open');
-    overlay.classList.add('show-overlay');
-})
+// project1.addEventListener('click', () => {
+//     modal.classList.add('modal-show');
+//     body.classList.add('modal-open');
+//     overlay.classList.add('show-overlay');
+// })
 
 // project2.addEventListener('click', () => {
 //     modal2.classList.add('modal-show');
@@ -76,35 +76,35 @@ project1.addEventListener('click', () => {
 //     overlay.classList.add('show-overlay');
 // })
 
-project3.addEventListener('click', () => {
-    modal3.classList.add('modal-show');
-    body.classList.add('modal-open');
-    overlay.classList.add('show-overlay');
-})
+// project3.addEventListener('click', () => {
+//     modal3.classList.add('modal-show');
+//     body.classList.add('modal-open');
+//     overlay.classList.add('show-overlay');
+// })
 
-project4.addEventListener('click', () => {
-    modal4.classList.add('modal-show');
-    body.classList.add('modal-open');
-    overlay.classList.add('show-overlay');
-})
+// project4.addEventListener('click', () => {
+//     modal4.classList.add('modal-show');
+//     body.classList.add('modal-open');
+//     overlay.classList.add('show-overlay');
+// })
 
-project5.addEventListener('click', () => {
-    modal5.classList.add('modal-show');
-    body.classList.add('modal-open');
-    overlay.classList.add('show-overlay');
-})
+// project5.addEventListener('click', () => {
+//     modal5.classList.add('modal-show');
+//     body.classList.add('modal-open');
+//     overlay.classList.add('show-overlay');
+// })
 
-project6.addEventListener('click', () => {
-    modal6.classList.add('modal-show');
-    body.classList.add('modal-open');
-    overlay.classList.add('show-overlay');
-})
+// project6.addEventListener('click', () => {
+//     modal6.classList.add('modal-show');
+//     body.classList.add('modal-open');
+//     overlay.classList.add('show-overlay');
+// })
 
-exit.addEventListener('click', () => {
-    modal.classList.remove('modal-show');
-    body.classList.remove('modal-open');
-    overlay.classList.remove('show-overlay');
-})
+// exit.addEventListener('click', () => {
+//     modal.classList.remove('modal-show');
+//     body.classList.remove('modal-open');
+//     overlay.classList.remove('show-overlay');
+// })
 
 // exit2.addEventListener('click', () => {
 //     modal2.classList.remove('modal-show');
@@ -112,29 +112,29 @@ exit.addEventListener('click', () => {
 //     overlay.classList.remove('show-overlay');
 // })
 
-exit3.addEventListener('click', () => {
-    modal3.classList.remove('modal-show');
-    body.classList.remove('modal-open');
-    overlay.classList.remove('show-overlay');
-})
+// exit3.addEventListener('click', () => {
+//     modal3.classList.remove('modal-show');
+//     body.classList.remove('modal-open');
+//     overlay.classList.remove('show-overlay');
+// })
 
-exit4.addEventListener('click', () => {
-    modal4.classList.remove('modal-show');
-    body.classList.remove('modal-open');
-    overlay.classList.remove('show-overlay');
-})
+// exit4.addEventListener('click', () => {
+//     modal4.classList.remove('modal-show');
+//     body.classList.remove('modal-open');
+//     overlay.classList.remove('show-overlay');
+// })
 
-exit5.addEventListener('click', () => {
-    modal5.classList.remove('modal-show');
-    body.classList.remove('modal-open');
-    overlay.classList.remove('show-overlay');
-})
+// exit5.addEventListener('click', () => {
+//     modal5.classList.remove('modal-show');
+//     body.classList.remove('modal-open');
+//     overlay.classList.remove('show-overlay');
+// })
 
-exit6.addEventListener('click', () => {
-    modal6.classList.remove('modal-show');
-    body.classList.remove('modal-open');
-    overlay.classList.remove('show-overlay');
-})
+// exit6.addEventListener('click', () => {
+//     modal6.classList.remove('modal-show');
+//     body.classList.remove('modal-open');
+//     overlay.classList.remove('show-overlay');
+// })
 
 // animations
 const projectitems = document.querySelectorAll('.scroll-animation');
