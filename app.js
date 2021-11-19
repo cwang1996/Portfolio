@@ -13,7 +13,7 @@ const navitems = document.querySelectorAll('.nav-item');
 const navblur = document.querySelector('.navblur');
 
 showmenu.addEventListener('click', () => {
-    navbar2.classList.toggle('shownavbar');
+    navbar2.classList.toggle('showsidebar');
     showmenu.classList.add('hidemenu');
     exitmenu.classList.add('showmenu');
     navblur.classList.add('navbluradd');
@@ -21,7 +21,7 @@ showmenu.addEventListener('click', () => {
 })
 
 exitmenu.addEventListener('click', () => {
-    navbar2.classList.toggle('shownavbar');
+    navbar2.classList.toggle('showsidebar');
     showmenu.classList.remove('hidemenu');
     exitmenu.classList.remove('showmenu');
     navblur.classList.remove('navbluradd');
@@ -30,7 +30,7 @@ exitmenu.addEventListener('click', () => {
 
 navitems.forEach((item) => {
     item.addEventListener('click', () => {
-        navbar2.classList.remove('shownavbar');
+        navbar2.classList.remove('showsidebar');
         exitmenu.classList.remove('showmenu');
         navblur.classList.remove('navbluradd');
         body.classList.remove('noscroll');
@@ -41,100 +41,6 @@ navitems.forEach((item) => {
         }
     })
 });
-
-// modal items
-const modal = document.querySelector('.modal-1');
-const modal2 = document.querySelector('.modal-2');
-const modal3 = document.querySelector('.modal-3');
-const modal4 = document.querySelector('.modal-4');
-const modal5 = document.querySelector('.modal-5');
-const modal6 = document.querySelector('.modal-6');
-const project1 = document.querySelector('.project-one');
-const project2 = document.querySelector('.project-two');
-const project3 = document.querySelector('.project-three');
-const project4 = document.querySelector('.project-four');
-const project5 = document.querySelector('.project-five');
-const project6 = document.querySelector('.project-six');
-const exit = document.querySelector('.exit');
-const exit2 = document.querySelector('.exit2');
-const exit3 = document.querySelector('.exit3');
-const exit4 = document.querySelector('.exit4');
-const exit5 = document.querySelector('.exit5');
-const exit6 = document.querySelector('.exit6');
-const body = document.getElementById('body');
-const overlay = document.querySelector('.overlay');
-
-// project1.addEventListener('click', () => {
-//     modal.classList.add('modal-show');
-//     body.classList.add('modal-open');
-//     overlay.classList.add('show-overlay');
-// })
-
-// project2.addEventListener('click', () => {
-//     modal2.classList.add('modal-show');
-//     body.classList.add('modal-open');
-//     overlay.classList.add('show-overlay');
-// })
-
-// project3.addEventListener('click', () => {
-//     modal3.classList.add('modal-show');
-//     body.classList.add('modal-open');
-//     overlay.classList.add('show-overlay');
-// })
-
-// project4.addEventListener('click', () => {
-//     modal4.classList.add('modal-show');
-//     body.classList.add('modal-open');
-//     overlay.classList.add('show-overlay');
-// })
-
-// project5.addEventListener('click', () => {
-//     modal5.classList.add('modal-show');
-//     body.classList.add('modal-open');
-//     overlay.classList.add('show-overlay');
-// })
-
-// project6.addEventListener('click', () => {
-//     modal6.classList.add('modal-show');
-//     body.classList.add('modal-open');
-//     overlay.classList.add('show-overlay');
-// })
-
-// exit.addEventListener('click', () => {
-//     modal.classList.remove('modal-show');
-//     body.classList.remove('modal-open');
-//     overlay.classList.remove('show-overlay');
-// })
-
-// exit2.addEventListener('click', () => {
-//     modal2.classList.remove('modal-show');
-//     body.classList.remove('modal-open');
-//     overlay.classList.remove('show-overlay');
-// })
-
-// exit3.addEventListener('click', () => {
-//     modal3.classList.remove('modal-show');
-//     body.classList.remove('modal-open');
-//     overlay.classList.remove('show-overlay');
-// })
-
-// exit4.addEventListener('click', () => {
-//     modal4.classList.remove('modal-show');
-//     body.classList.remove('modal-open');
-//     overlay.classList.remove('show-overlay');
-// })
-
-// exit5.addEventListener('click', () => {
-//     modal5.classList.remove('modal-show');
-//     body.classList.remove('modal-open');
-//     overlay.classList.remove('show-overlay');
-// })
-
-// exit6.addEventListener('click', () => {
-//     modal6.classList.remove('modal-show');
-//     body.classList.remove('modal-open');
-//     overlay.classList.remove('show-overlay');
-// })
 
 // animations
 const projectitems = document.querySelectorAll('.scroll-animation');
@@ -171,15 +77,21 @@ window.onscroll = function() {
     if(window.scrollY > 50) {
         navbar.classList.remove('navbartransparent');
         navbar.classList.add('navbarbg');
+        navbarmenu.classList.remove('navbartransparent');
+        navbarmenu.classList.add('navbarbg');
     } else {
         navbar.classList.add('navbartransparent');
         navbar.classList.remove('navbarbg');
+        navbarmenu.classList.add('navbartransparent');
+        navbarmenu.classList.remove('navbarbg');
     }
 
     if(prevScrollPos > currentScrollPos) {
         navbar.classList.remove('shownavbar');
+        navbarmenu.classList.remove('shownavbar');
     } else {
         navbar.classList.add('shownavbar');
+        navbarmenu.classList.add('shownavbar');
     }
     prevScrollPos = currentScrollPos;
 }
