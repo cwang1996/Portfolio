@@ -48,18 +48,27 @@
 
     <!-- secondary navbar for resized mobile view -->
     <nav class='navbar2'>
+      <i class='exitmenu fas fa-times'></i>
       <ul class='navbarlinks'>
         <li><a class='nav-item' href='#top-page'>Home</a></li>
         <li><a class='nav-item' href='#projects-section'>Projects</a></li>
         <li><a class='nav-item' href='#about-section'>About</a></li>
         <li><a class='nav-item' href='#contact-section'>Contact</a></li>
       </ul>
+      <div class='contact2'>
+        <ul class='contact-links2'>
+          <a class='contact-items2 linkedin2' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target='_blank'><li class='linkedin2'><i class='icons2 fab fa-linkedin'></i></li></a>
+          <a class='contact-items2 github2' href='https://github.com/cwang1996' target='_blank'><li class='github2'><i class='icons2 fab fa-github'></i></li></a>
+          <a class='contact-items2 email2' href='mailto: calvinwang@yahoo.com'><li class='email2'><i class='icons2 fas fa-envelope'></i></li></a>
+          <a class='contact-items2 resume2' href='resume/CalvinWang_Resume.pdf' target='_blank'><li class='resume2'><i class='icons2 fas fa-file'></i></li></a>
+        </ul>
+      </div>
     </nav>
 
     <!-- icons to open and close the navbar in mobile view -->
     <div>
-      <i class='barmenu fas fa-bars'></i>
-      <i class='exitmenu fas fa-times'></i>
+      <!-- <i class='barmenu fas fa-bars'></i> -->
+      <!-- <i class='exitmenu fas fa-times'></i> -->
     </div>
 
   <!-- blurs page after navbar is opened in mobile view -->
@@ -68,17 +77,15 @@
       <div class='navbar-logo2'>
         <span><a id='top-page' href='#top-page'>CW</a></span>
       </div>
+      <i class='barmenu fas fa-bars'></i>
     </div>
 
     <!-- welcome/homepage section -->
     <section id='welcome-section'>
-        <div class='scrolldown scrolldowns fade-in'>
-          <span class='scrollspan'>scroll down</span>
-        </div>
         <div class='wrap'>
           <h1 class='welcome-title popout'>Hello, I'm <span class='color-name'>Calvin Wang</span> <span class='wave'>&#9996</span></h1>
           <div class='welcome-wrap'>
-            <p class='welcome-p popout'>A Front End Developer currently living in Sacramento, CA. Passionate in creating responsive and engaging user experiences.  </p>
+            <p class='welcome-p popout'>A Web Developer currently based in Sacramento, CA. Passionate in creating responsive and engaging user experiences.  </p>
           </div>
           <div class='button-container'>  
             <a href='#projects-section'>
@@ -89,180 +96,55 @@
 
     <!-- projects section -->
     <section id='projects-section'>
-      <div class='scrolldown fade-in'>
-        <span class='scrollspan'>who am i?</span>
-      </div>
       <h2 class='projects-title'>Projects</h2>
-      <div class='projects-c content'>
         <div class='projects-container'>
           <!-- ecommerce -->
-<!--           <div class='project-item scroll-animation'>
-            <img class='project-image' src='screenshots/ecommerce.webp' alt='ecommerce'>
-            <button class='view-btn project-one'>View Project</button>
-          </div> -->
-          <!-- <div class='project-item scroll-animation'>
-            <img class='project-image' src='' alt='restaurant'>
-            <button class='view-btn project-two'>View Project</button>
-          </div> -->
-          <!-- moviedb -->
-<!--           <div class='project-item scroll-animation'>
-            <img class='project-image' src='screenshots/moviedb.webp' alt='movie'>
-            <button class='view-btn project-three'>View Project</button>
-          </div> -->
-          <!-- covid-tracker -->
-<!--           <div class='project-item scroll-animation'>
-            <img src='screenshots/covid-tracker.webp' class='project-image' alt='covid-tracker'>
-            <button class='view-btn project-four'>View Project</button>
-          </div> -->
-          <!-- portfolio -->
-<!--           <div class='project-item scroll-animation'>
-            <img src='screenshots/portfolio.webp' class='project-image' alt='portfolio project'>
-            <button class='view-btn project-five'>View Project</button>
-          </div> -->
-          <!-- 30websites30days -->
-<!--           <div class='project-item scroll-animation'>
-            <img class='project-image' src='screenshots/30websites30days.webp' alt='30websites30days'>
-            <button class='view-btn project-six'>View Project</button>
+          <div class='project-item scroll-animation'>
+            <div class='image-container left-image'>
+              <img class='project-image' src='screenshots/e-commerce.png' alt='ecommerce'>
+            </div>
+            <div class='project-info'>
+              <h2>Rainforest E-Commerce App</h2>
+              <p>A full stack e-commerce shopping application built using React.js, MongoDB, Node.js, and Express.js</p>
+              <div>
+                <a href='' target='_blank'><button class='live-btn'>Live App</button></a>
+                <a href='https://github.com/cwang1996/rainforest-ecommerce-shop' target='_blank'><button class='code-btn'>Code</button></a>
+              </div>
+            </div>
           </div>
-        </div> -->
-    </div>
 
-      <!-- modals for the projects -->
-<!--       <div class='overlay'>
-        <div class='modal-item modal-1'>
-          <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src='screenshots/ecommerce.webp'></div>
-            <div class='right-side'>
-              <h3 class='project_name'>Rainforest</h3>
-              <i class='exit fas fa-times'></i>
-              <ul>
-                <li>HTML</li>
-                <li>SASS</li>
-                <li>JavaScript</li>
-              </ul>
-              <p class='project_summary'>Rainforest is a responsive website that is inspired by modern shopping websites. The website is specifically for furniture products, with several dynamic components and functionality. A working shopping function allows furniture to be added for checkout. Back end functionality including a checkout system will be further implemented.</p>
-              <div class='btn-links'>
-                <a class='demo-btn' href='https://cwang1996.github.io/rainforest/' target='_blank'>Demo</a>
-                <a class='code-btn' href='https://github.com/cwang1996/rainforest' target='_blank'>Code</a>
+          <div class='project-item scroll-animation'>
+            <div class='project-info order1'>
+              <h2>iChat Firebase App</h2>
+              <p>A messenger app built using Firebase, Chat Engine, and React.js. Includes social authentication via Google and Facebook</p>
+              <div>
+                <button class='live-btn'>Live App</button>
+                <button class='code-btn'>Code</button>
               </div>
             </div>
-          </div> 
-        </div> -->
+            <div class='image-container left-image order2'>
+              <img class='project-image' src='screenshots/e-commerce.png' alt='ecommerce'>
+            </div>
+          </div>
 
-        <!-- <div class='modal-item modal-2'>
-          <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src=''></div>
-            <div class='right-side'>
-              <h3 class='project_name'>MovieDB Search</h3>
-              <i class='exit2 fas fa-times'></i>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React.js</li>
-                <li>API</li>
-              </ul>
-              <p class='project_summary'>This project utilizes React framework and API to create an application that takes the current top featured movies and displays them in a grid container. The search function is also available to search for any movie titles. Hovering over the movie will show the overview of the movie.</p>
-              <div class='btn-links'>
-                <a class='demo-btn' href='https://cwang1996.github.io/MovieDB_App/' target='_blank'>Demo</a>
-                <a class='code-btn' href='https://github.com/cwang1996/MovieDB_App' target='_blank'>Code</a>
+          <div class='project-item scroll-animation'>
+            <div class='image-container left-image'>
+              <img class='project-image' src='screenshots/covid-tracker.webp' alt='covid-tracker'>
+            </div>
+            <div class='project-info'>
+              <h2>Covid-19 Tracker App</h2>
+              <p>A tracking app that displays the total cases, recoverd, and deaths of Covid-19 for a particular country. Built using HTML, CSS, and JavaScript </p>
+              <div>
+                <a href='https://cwang1996.github.io/Covid-19-Tracker/' target='_blank'><button class='live-btn'>Live App</button></a>
+                <a href='https://github.com/cwang1996/Covid-19-Tracker' target='_blank'><button class='code-btn'>Code</button></a>
               </div>
             </div>
-          </div> 
-        </div> -->
-  
-<!--         <div class='modal-item modal-3'>
-          <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src='screenshots/moviedb.webp'></div>
-            <div class='right-side'>
-              <h3 class='project_name'>MovieDB Search</h3>
-              <i class='exit3 fas fa-times'></i>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React.js</li>
-                <li>API</li>
-              </ul>
-              <p class='project_summary'>This project utilizes React framework and API to create an application that takes the current top featured movies and displays them in a grid container. The search function is also available to search for any movie titles. Hovering over the movie will show the overview of the movie.</p>
-              <div class='btn-links'>
-                <a class='demo-btn' href='https://cwang1996.github.io/MovieDB_App/' target='_blank'>Demo</a>
-                <a class='code-btn' href='https://github.com/cwang1996/MovieDB_App' target='_blank'>Code</a>
-              </div>
-            </div>
-          </div> 
         </div>
-
-        <div class='modal-item modal-4'>
-          <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src='screenshots/covid-tracker.webp'></div>
-            <div class='right-side'>
-              <h3 class='project_name'>Covid-19 Tracker</h3>
-              <i class='exit4 fas fa-times'></i>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Chart.js</li>
-                <li>API</li>
-              </ul>
-              <p class='project_summary'>For this project I used the free API available from covid19api.com in order to create a chart that tracks the amount of cases of Covid-19 for every country. I used Chart.js to visualize the data with a bar graph. </p>
-              <div class='btn-links'>
-                <a class='demo-btn' href='https://cwang1996.github.io/Covid-19-Tracker/' target='_blank'>Demo</a>
-                <a class='code-btn' href='https://github.com/cwang1996/Covid-19-Tracker' target='_blank'>Code</a>
-              </div>
-            </div>
-          </div> 
-        </div>
-
-        <div class='modal-item modal-5'>
-          <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src='screenshots/portfolio.webp'></div>
-            <div class='right-side'>
-              <h3 class='project_name'>Portfolio</h3>
-              <i class='exit5 fas fa-times'></i>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <p class='project_summary'>This project showcases my portfolio site. I wanted to make sure that my portfolio gave off a minimalistic and clean impression. For the landing page, I made sure that all my social media links, and other important information were all available with a click of a button. The sticky navbar when viewing the other sections of the portfolio allow for easy navigation of the website.</p>
-              <div class='btn-links'>
-                <a class='demo-btn' href='https://cwang1996.github.io/Portfolio/' target='_blank'>Demo</a>
-                <a class='code-btn' href='https://github.com/cwang1996/Portfolio' target='_blank'>Code</a>
-              </div>
-            </div>
-          </div> 
-        </div>
-
-        <div class='modal-item modal-6'>
-          <div class='modal-container'>
-            <div class='left-side'><img class='project-img' src='screenshots/30websites30days.webp'></div>
-            <div class='right-side'>
-              <h3 class='project_name'>30Websites30Days</h3>
-              <i class='exit6 fas fa-times'></i>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <p class='project_summary'>This website was my first introduction to web development. I believed that the fastest way to learn is from actually building websites and doing projects. I channeled this learn by doing mentality and decided to challenge myself to build 30 websites in 30 days. </p>
-              <div class='btn-links'>
-                <a class='demo-btn' href='https://cwang1996.github.io/30Websites30Days/' target='_blank'>Demo</a>
-                <a class='code-btn' href='https://github.com/cwang1996/30Websites30Days' target='_blank'>Code</a>
-              </div>
-            </div>
-          </div> 
-        </div>
-      </div>   
-    </section> -->
+    </section>
 
     <!-- about section -->
     <section id='about-section'>
-      <div class='scrolldown aboutdown'>
-        <span class='scrollspan'>get in touch</span>
-      </div>
-      <h2 class='about-h2 scroll-animation'>A short backstory</h2>
+      <h2 class='about-h2 scroll-animation'>About</h2>
       <div class='about-wrap'>
         <p class='about-p scroll-animation'>I graduated in 2018 from Cal Poly San Luis Obispo with a Bachelors Degree in Business Administration. My first job was part of an IT company as a consultant, but I never felt that it was what I wanted to do for the rest of my life.<br><br>I began my journey in coding in 2021. I wanted to challenge myself to do something outside of my comfort zone, and coding seemed like the perfect fit, as I have always been fascinated with how it worked. I've been completely hooked and growing more passionate and eager to learn each day.<br><br> My goal is to learn all the foundational concepts for Front-End development, and eventually dive into the back-end. Ultimately, I want to challenge myself to learn something new everyday and have consistent growth in my technical skillset. </p>
         <div class='skills-container'>
@@ -294,36 +176,28 @@
 
     <!-- contact section -->
     <section id='contact-section'>
-      <div class='scrolldown'>
-        <span class='scrollspan'>thank you</span>
-      </div>
       <div class='contact-header'>
-        <h2 class='contact-h2'>Let's Connect!</h2>
-        <p class='contact-p'>Have questions, or want to have a quick chat?</p>
+        <h2 class='contact-h2'>Contact</h2>
       </div>
+        <p class='contact-p'>Have questions, or want to have a quick chat? Leave a message and I will reply as soon as possible.</p>
       <form action='POST' data-netlify='true' class='contact-form'>
         <input type='text' placeholder='Name' class='contact-name' name='name' required>
         <input type='text' placeholder='Email' class='contact-email' name='email' required>
         <textarea placeholder='Message' class='contact-message' name='message' required></textarea>
         <input type='submit' class='submit-btn'>
       </form>
-
-      <div class='contact2'>
-        <ul class='contact-links2'>
-          <a class='contact-items2 linkedin2' href='https://www.linkedin.com/in/calvin-wang-b05839a4/' target='_blank'><li class='linkedin2'><i class='icons2 fab fa-linkedin'></i></li></a>
-          <a class='contact-items2 github2' href='https://github.com/cwang1996' target='_blank'><li class='github2'><i class='icons2 fab fa-github'></i></li></a>
-          <a class='contact-items2 email2' href='mailto: calvinwang@yahoo.com'><li class='email2'><i class='icons2 fas fa-envelope'></i></li></a>
-          <a class='contact-items2 resume2' href='resume/CalvinWang_Resume.pdf' target='_blank'><li class='resume2'><i class='icons2 fas fa-file'></i></li></a>
-        </ul>
-      </div>
     </section>
 
     <!-- footer section -->
     <footer>
-      <a href='#welcome-section'><i class='uparrow fas fa-angle-double-up' tabindex='0'></i></a>
+      <a href='#welcome-section'>
+        <div class='go-home'>
+          <i class='uparrow fas fa-angle-double-up' tabindex='0'></i>
+        </div>
+      </a>
       <ul>
         <li>&#169; 2021 Calvin Wang</li>
-      </ul>   
+      </ul>
     </footer>
   </div>
 
