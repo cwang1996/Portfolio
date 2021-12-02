@@ -359,7 +359,7 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .project-item {
@@ -422,7 +422,7 @@ body, html {
 .about-p {
   font-size: 18px;
   color: #d7ecff;
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: left;
   line-height: 1.5;
 }
@@ -503,6 +503,7 @@ body, html {
 
 .contact-header {
   margin-top: -55px;
+  margin-bottom: 10px;
 }
 
 .contact-header h2, .contact-header p {
@@ -895,7 +896,7 @@ footer ul li {
 
 .projects-container {
   width: 350px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .about-wrap {
