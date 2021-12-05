@@ -279,7 +279,7 @@ body, html {
       opacity: 0;
     }
     80%{
-      transform:scale(1.2);
+      transform:scale(1.05);
     }
     to{
       transform:scale(1);
