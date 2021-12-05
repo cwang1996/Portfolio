@@ -616,15 +616,15 @@ footer ul li {
 
 @media screen and (max-width: 1245px) {
   .welcome-title, .about-h2, .contact-h2, .projects-title {
-    font-size: 38px;
+    font-size: 42px;
   }
 
   .welcome-p, .contact-p, .about-p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .welcome-wrap {
-    width: 450px;
+    width: 550px;
   }
 
   .projects-btn {
@@ -632,11 +632,11 @@ footer ul li {
   }
 
   .contact-name, .contact-email, .contact-message{
-    width: 450px;
+    width: 600px;
   }
 
   .about-wrap {
-  width: 450px;
+  width: 600px;
   }
 
   .skills {
@@ -740,6 +740,22 @@ footer ul li {
     position: fixed;
     z-index: 1;
     transition: all .5s ease-in-out;
+  }
+    
+   .welcome-title, .about-h2, .contact-h2, .projects-title {
+    font-size: 38px;
+  }
+
+  .welcome-wrap {
+    width: 450px;
+  }
+
+  .contact-name, .contact-email, .contact-message{
+    width: 450px;
+  }
+
+  .about-wrap {
+  width: 450px;
   }
 
   .navbar-logo2 {
