@@ -14,6 +14,7 @@ Featured ideas to implement.
 - Canvas background animation (Particles.js)
 - Transition animation when scrolling to a certain part of the page
 - Effect when hovering over letters on landing page
+- Mouse animation scroll effect
 
 <!-- Setup:
 - run ```npm i && npm start``` for both client and server side to start the development server -->
