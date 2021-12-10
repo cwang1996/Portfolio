@@ -1,4 +1,4 @@
-# Portfoli
+# Portfolio
 
 ### [Live Site](https://calvinwang.me/)
 
